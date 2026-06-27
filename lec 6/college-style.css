@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.navbar {
+  background-color: #1a237e;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+ul a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  font-size: 15px;
+}
+
+ul a:hover {
+  background-color: #ff9900;
+}
+
+.menu-btn {
+  display: none;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  ul.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}

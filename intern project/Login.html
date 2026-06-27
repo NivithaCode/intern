@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movies Review & Rating</title>
+  <link rel="stylesheet" href="Login-style.css"/>
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav>
+    <div class="logo">
+      <div>
+        <div class="logo-text">M<span class="logo-icon">🎬</span>VIES</div>
+        <div class="logo-sub">Review &amp; Rating</div>
+      </div>
+    </div>
+
+    <!--link middle-->
+    <ul class="nav-links">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Top Rated</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Watchlist</a></li>
+    </ul>
+
+  
+  </nav>
+
+  <!-- ── Main Two Column Layout ── -->
+  <div class="main-layout">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+
+      <div>
+        <div class="big-logo-icon">&#127916;</div>
+        <div class="big-logo-text">M&#127916;</div>
+        <div class="big-logo-sub">Review &amp; Rating</div>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="word-discover">DISCOVER.</span><br>
+        <span class="word-review">REVIEW.</span><br>
+        <span class="word-rate">RATE.</span>
+      </h1>
+
+      <p class="hero-sub">Your Opinion Matters!</p>
+
+      <div class="left-features">
+        <div class="feature-item">
+          <div class="feature-icon-wrap">&#11088;</div>
+          <div class="feature-label">Discover<br>Amazing Movies</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-wrap">&#9999;</div>
+          <div class="feature-label">Review &amp; Share<br>Your Thoughts</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-wrap">♥</div>
+          <div class="feature-label">Rate Your<br>Experience</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+      <div class="login-card">
+
+        <div class="login-avatar">👤</div>
+        <h2>Welcome Back!</h2>
+        <p class="sub">Login to continue your movie journey</p>
+
+        <div class="input-group">
+          <span class="icon">✉</span>
+          <input type="email" placeholder="Email Address" />
+        </div>
+
+        <div class="input-group">
+          <span class="icon">🔒</span>
+          <input type="password" id="pwd" placeholder="Password" />
+          <button class="eye-btn" id="eye" onclick="togglePwd()">👁</button>
+        </div>
+
+        <div class="form-options">
+          <label class="remember">
+            <input type="checkbox" /> Remember me
+          </label>
+          <a href="#" class="forgot">Forgot Password?</a>
+        </div>
+
+        <a href="Dashboard.html" style="width:100%;text-decoration:none;">
+          <button class="btn-login">Login</button>
+        </a>
+
+        <p class="register-link">Don't have an account? <a href="#">Register now</a></p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function togglePwd() {
+      const pwd = document.getElementById("pwd");
+      const eye = document.getElementById("eye");
+      if (pwd.type === "password") {
+        pwd.type = "text";
+        eye.innerHTML = "🙈";
+      } else {
+        pwd.type = "password";
+        eye.innerHTML = "👁️";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MovieReview &amp; Rating System — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Dashboard-style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-icon">&#127916;</span>
+      <div class="brand-text">
+        <span class="brand-name">Movie<span class="accent">Review</span></span>
+        <span class="brand-sub">&amp; Rating System</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="nav-item active"><span class="nav-icon">&#127968;</span>Dashboard</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#127909;</span>Movies</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#128221;</span>Review</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#11088;</span>Ratings</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#9881;</span>Settings</a>
+    </nav>
+
+    <div class="sidebar-promo">
+      <span class="promo-icon">&#127871;&#127846;&#127871;&#127846;</span>
+      <h4>Welcome back!</h4>
+      <p>Explore movies, read reviews and share your thoughts.</p>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- top bar -->
+    <header class="topbar">
+      <div class="topbar-text">
+        <h1>Welcome back, CineVerse <span class="wave">&#128075;</span></h1>
+        <p>Here's what's happening with your movie community.</p>
+      </div>
+
+      <div class="topbar-actions">
+        <div class="search-box">
+          <span class="search-icon">&#128270;</span>
+          <input type="text" placeholder="Search movies, users, reviews...">
+        </div>
+        <button class="icon-btn" aria-label="Notifications">
+          &#128276;<span class="badge">3</span>
+        </button>
+        <div class="profile">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy606CYdQuQNTxOH0mHl6Lxdker4OH8Nvvg&s" alt="Admin Profile">
+          <span>Admin</span>
+          <span class="chev">▾</span>
+        </div>
+        <button class="btn-primary">+ Add Movie</button>
+      </div>
+    </header>
+
+    <!-- stat cards -->
+    <section class="stats-grid">
+      <div class="stat-card stat-purple">
+        <div class="stat-icon">&#127916;</div>
+        <div class="stat-info">
+          <span class="stat-label">Total Movies</span>
+          <span class="stat-value">248</span>
+          <span class="stat-delta up">↑ 12 this month</span>
+        </div>
+      </div>
+      <div class="stat-card stat-blue">
+        <div class="stat-icon">&#11088;</div>
+        <div class="stat-info">
+          <span class="stat-label">Total Reviews</span>
+          <span class="stat-value">1,325</span>
+          <span class="stat-delta up">↑ 35 this month</span>
+        </div>
+      </div>
+      <div class="stat-card stat-green">
+        <div class="stat-icon">&#128101;</div>
+        <div class="stat-info">
+          <span class="stat-label">Total Users</span>
+          <span class="stat-value">892</span>
+          <span class="stat-delta up">↑ 28 this month</span>
+        </div>
+      </div>
+      <div class="stat-card stat-orange">
+        <div class="stat-icon">&#127942;</div>
+        <div class="stat-info">
+          <span class="stat-label">Average Rating</span>
+          <span class="stat-value">4.2</span>
+          <span class="stat-delta neutral">★ Great!</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- content grid -->
+    <section class="content-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="col-left">
+
+        <!-- top rated movies -->
+        <div class="panel">
+          <div class="panel-head">
+            <h3><span class="title-icon">&#11088;</span> Top Rated Movies</h3>
+            <a href="#" class="view-all">View All</a>
+          </div>
+          <div class="movie-row">
+            <div class="movie-card">
+              <div class="poster poster-1"><span class="rating-chip">★ 4.5</span>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ97v_59AKV3Ju0DqjzcNz3HX3FzkFYiBlN5keeXmNV9A&s=10">
+              </div>
+              <p class="movie-title">Jawan</p>
+              <p class="movie-meta">2023 · 169m</p>
+              <a href="Jawan.html">
+                <button class="details-btn">view details</button>
+              </a>
+            </div>
+            <div class="movie-card">
+              <div class="poster poster-2"><span class="rating-chip">★ 4.7</span>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5EVKzT7Q76aQO20t933sVRyMaKFlnNaSNqCfkl51YMw&s=10">
+            </div>
+              <p class="movie-title">RRR</p>
+              <p class="movie-meta">2022 · 187m</p>
+              <a href="RRR.html">
+                <button class="details-btn">view details</button>
+              </a>
+            </div>
+            <div class="movie-card">
+              <div class="poster poster-3"><span class="rating-chip">★ 4.6</span>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JUrgWyFri6wC7neU__yPaQIJyWQ3wrQ3FFCXXVsP9A&s=10">
+            </div>
+              <p class="movie-title">Jana Nayagan</p>
+              <p class="movie-meta">2026 · 183m</p>
+              <a href="Jana Nayagan.html">
+                <button class="details-btn">view details</button>
+              </a>
+              
+            </div>
+            <div class="movie-card">
+              <div class="poster poster-4"><span class="rating-chip">★ 4.6</span>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLUbgB4Uig256VPMAMvPGB5xGFropWj0jpADzUuD5xqE81AEHKLabe1w&s=10">
+              </div>
+              <p class="movie-title">Avatar: The Way Of Water</p>
+              <p class="movie-meta">2022 · 192m</p>
+              <a href="Avatar.html">
+                <button class="details-btn">view details</button>
+              </a>
+              
+            </div>
+            <div class="movie-card">
+              <div class="poster poster-5"><span class="rating-chip">★ 4.8</span>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuAaFoBHE4wG7f_lCVqR_P7U1gVxVySQmSrSY_YtF7BA&s=10">
+              </div>
+              <p class="movie-title">Interstellar</p>
+              <p class="movie-meta">2014 · 169m</p>
+              <a href="Interstellar.html">
+                <button class="details-btn">view details</button>
+              </a>
+              
+          </div>
+        </div>
+        
+
+        <!-- reviews over time + top genres -->
+        <div class="panel-pair">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Reviews Over Time</h3>
+              <select class="select-mini"><option>This Month</option></select>
+            </div>
+            <svg viewBox="0 0 600 220" class="line-chart" preserveAspectRatio="none">
+              <line x1="0" y1="20" x2="600" y2="20" class="grid-line"/>
+              <line x1="0" y1="70" x2="600" y2="70" class="grid-line"/>
+              <line x1="0" y1="120" x2="600" y2="120" class="grid-line"/>
+              <line x1="0" y1="170" x2="600" y2="170" class="grid-line"/>
+              <polyline class="chart-fill" points="0,170 80,150 160,140 240,110 320,120 400,80 480,90 560,30 600,20 600,220 0,220" />
+              <polyline class="chart-line" points="0,170 80,150 160,140 240,110 320,120 400,80 480,90 560,30 600,20" />
+            </svg>
+            <div class="chart-labels">
+              <span> june 1 </span><span> june 3 </span><span> june 7 </span><span> june 10 </span><span> june 18 </span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Top Genres</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <ul class="genre-list">
+              <li><span class="genre-dot dot-purple"></span>Action <div class="genre-bar"><div class="genre-fill" style="width:35%;background:#8b5cf6"></div></div><span class="genre-pct">45%</span></li>
+              <li><span class="genre-dot dot-pink"></span>Drama <div class="genre-bar"><div class="genre-fill" style="width:25%;background:#ec4899"></div></div><span class="genre-pct">27%</span></li>
+              <li><span class="genre-dot dot-blue"></span>Sci-Fi <div class="genre-bar"><div class="genre-fill" style="width:20%;background:#3b82f6"></div></div><span class="genre-pct">35%</span></li>
+              <li><span class="genre-dot dot-green"></span>Thriller <div class="genre-bar"><div class="genre-fill" style="width:10%;background:#10b981"></div></div><span class="genre-pct">18%</span></li>
+              <li><span class="genre-dot dot-orange"></span>Comedy <div class="genre-bar"><div class="genre-fill" style="width:10%;background:#f59e0b"></div></div><span class="genre-pct">21%</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- recent added movies -->
+<div class="panel">
+  <div class="panel-head">
+    <h3><span class="title-icon">&#127916;</span> Recent Added Movies</h3>
+    <a href="#" class="view-all">View All</a>
+  </div>
+
+  <div class="movie-row">
+
+    <div class="movie-card">
+      <div class="poster poster-6">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXC1GaGBrzXpQ8bHFbmM0HRzdvqNlKZe7udoX5nUXnZA&s=10">
+      </div>
+      <p class="movie-title">Family business</p>
+      <p class="movie-meta">2026</p>
+      <a href="Family Business.html">
+                <button class="details-btn">view details</button>
+              </a>
+    </div>
+
+    <div class="movie-card">
+      <div class="poster poster-7">
+        <img src="https://variety.com/wp-content/uploads/2026/06/EN-US_MJOT_Main_Vertical_4x5_RGB_PREDATE.jpg?w=1000&h=667&crop=1">
+      </div>
+      <p class="movie-title">Michael Jackson:The Verdict</p>
+      <p class="movie-meta">2026</p>
+      <a href="Michael jackson.html">
+                <button class="details-btn">view details</button>
+              </a>
+    </div>
+
+    <div class="movie-card">
+      <div class="poster poster-8">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUOmX8sbRzob2cAI3xHJDb5Q5v28yMCVAjJbnNvKi-A&s=10">
+      </div>
+      <p class="movie-title">LIK</p>
+      <p class="movie-meta">2026</p>
+      <a href="LIK.html">
+                <button class="details-btn">view details</button>
+              </a>
+    </div>
+
+    <div class="movie-card">
+      <div class="poster poster-9">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRlwlRcdHIDVihdm4cbh55FYdwmGjOZQOdeGVoR4GvSw&s=10">
+      </div>
+      <p class="movie-title">Spider-Man: No Way Home</p>
+      <p class="movie-meta">2021</p>
+      <a href="Spider man.html">
+                <button class="details-btn">view details</button>
+              </a>
+
+    </div>
+
+    </div>
+  </div>
+</div>
+</div>
+      <!-- RIGHT COLUMN -->
+      <div class="col-right">
+
+        <!-- ratings distribution -->
+        <div class="panel">
+          <div class="panel-head"><h3>Ratings Distribution</h3></div>
+          <div class="donut-wrap">
+            <div class="donut" style="background:conic-gradient(#8b5cf6 0% 45%, #10b981 45% 75%, #3b82f6 75% 90%, #f59e0b 90% 96%, #ef4444 96% 100%)">
+              <div class="donut-hole">
+                <span class="donut-value">1,325</span>
+                <span class="donut-label">Total Reviews</span>
+              </div>
+            </div> 
+            <ul class="legend">
+              <li><span class="dot dot-purple"></span>5 Stars <strong>45%</strong></li>
+              <li><span class="dot dot-green"></span>4 Stars <strong>30%</strong></li>
+              <li><span class="dot dot-blue"></span>3 Stars <strong>15%</strong></li>
+              <li><span class="dot dot-orange"></span>2 Stars <strong>6%</strong></li>
+              <li><span class="dot dot-red"></span>1 Star <strong>4%</strong></li>
+            </ul>
+          </div>
+        </div>
+
+       <!-- recent reviews -->
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Recent Reviews</h3>
+            <a href="#" class="view-all">View All</a>
+          </div>
+          <ul class="review-list">
+            <li>
+              <img src="https://www.shutterstock.com/image-vector/boy-happy-mode-emoji-style-260nw-2483002039.jpg" alt="">
+              <div class="review-info">
+                <span class="review-name">Karthik</span>
+                <span class="review-movie">(Jawan)</span>
+              </div>
+              <div class="review-right">
+                <span class="stars">★★★★</span>
+                <span class="review-time">2h ago</span>
+              </div>
+            </li>
+            <li>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNspJ890EiQagS59LOMaHWO9GuSyFd2Ev-R5luI7uylw&s=10" alt="">
+              <div class="review-info">
+                <span class="review-name">Neha</span>
+                <span class="review-movie">(RRR)</span>
+              </div>
+              <div class="review-right">
+                <span class="stars">★★★</span>
+                <span class="review-time">5h ago</span>
+              </div>
+            <li>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgsGfvrVl9-MOepsnLGdvl0Og2ZpOFCQj-yBQjBOXikA&s=10" alt="">
+              <div class="review-info">
+                <span class="review-name">Ananya</span>
+                <span class="review-movie">(Jana Nayagan)</span>
+              </div>
+              <div class="review-right">
+                <span class="stars">★★★★</span>
+                <span class="review-time">1d ago</span>
+              </div>
+            </li>
+            <li>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFBvFXDS621VuM7U-6vxYGJpzcPf-k0VgjdEns37PHWw&s=10" alt="">
+              <div class="review-info">
+                <span class="review-name"> Rahul</span>
+                <span class="review-movie">(Avatar:The Way of Water)</span>
+              </div>
+              <div class="review-right">
+                <span class="stars">★★★★</span>
+                <span class="review-time">2d ago</span>
+              </div>
+            </li>
+            <li>
+              <img src="data:image/jpeg;base64,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" alt="">
+              <div class="review-info">
+                <span class="review-name">Sanjay</span>
+                <span class="review-movie">(Interstellar)</span>
+              </div>
+              <div class="review-right">
+                <span class="stars">★★★★★</span>
+                <span class="review-time">3d ago</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- quick actions -->
+        <div class="panel">
+          <div class="panel-head"><h3>Quick Actions</h3></div>
+          <div class="quick-grid">
+            <button class="quick-btn qb-purple"><span>&#10133;</span>Add Movie</button>
+            <button class="quick-btn qb-blue"><span>&#128101;</span>Manage Users</button>
+            <button class="quick-btn qb-green"><span>&#128200;</span>View Reports</button>
+            <button class="quick-btn qb-orange"><span>&#127991;</span>Categories</button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+</div>
+
+</body>
+</html>

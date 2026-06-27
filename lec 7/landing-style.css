@@ -1,0 +1,85 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #1a1a2e;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #00d4ff;
+  font-size: 22px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #16213e;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin: 10px 0 20px;
+}
+
+.hero button {
+  background-color: #00d4ff;
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.features {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 20px;
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background-color: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

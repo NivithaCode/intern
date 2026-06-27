@@ -1,0 +1,12 @@
+body {
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200');
+  background-size: cover;
+  font-family: Arial;
+  padding: 30px;
+}
+
+h1 { color: yellow; }
+h2 { color: lightblue; }
+h3 { color: lightgreen; }
+p  { color: white; }
+ul { color: orange; }
