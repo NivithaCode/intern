@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings – MovieReview</title>
+  <link rel="stylesheet" href="settings-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">&#127916;</div>
+      <div>
+        <div class="brand-name">MovieReview</div>
+        <div class="brand-sub">Rating System</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="Dashboard.html" class="nav-item">
+        <span class="nav-icon">&#127968;</span> Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">&#127916;</span> Movies
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">&#128221;</span> Review
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-icon">&#11088;</span> Ratings
+      </a>
+      <a href="settings.html" class="nav-item active">
+        <span class="nav-icon">&#9881;</span> Settings
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1>Settings</h1>
+        <p>Manage your account and preferences</p>
+      </div>
+      <div class="topbar-actions">
+        <input type="text" class="search-box" placeholder="&#128269; Search settings..." />
+        <div class="avatar">A</div>
+        <span class="admin-label">Admin</span>
+      </div>
+    </header>
+
+    <!-- Settings Layout -->
+    <div class="settings-layout">
+
+      <!-- Settings Tabs -->
+      <div class="settings-tabs">
+        <button class="tab-btn active" data-tab="profile">&#128100; Profile</button>
+        <button class="tab-btn" data-tab="notifications">&#128276; Notifications</button>
+        <button class="tab-btn" data-tab="appearance">&#127912; Appearance</button>
+        <button class="tab-btn" data-tab="privacy">&#128274; Privacy</button>
+        <button class="tab-btn" data-tab="account">&#128737; Account</button>
+      </div>
+
+      <!-- Tab Panels -->
+      <div class="settings-panels">
+
+        <!-- PROFILE -->
+        <div class="tab-panel active" id="tab-profile">
+          <div class="panel-header">
+            <h2>Profile Settings</h2>
+            <p>Update your personal information and public profile</p>
+          </div>
+
+          <div class="card">
+            <div class="avatar-section">
+              <div class="profile-avatar">A</div>
+              <div class="avatar-info">
+                <strong> CineVerse</strong>
+                <span>hlo@cineverse.com</span>
+                <div class="avatar-btns">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Personal Information</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" value="Admin" />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" value="CineVerse" />
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" value="admin@cineverse.com" />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 XXXXX XXXXX" />
+              </div>
+              <div class="form-group full-width">
+                <label>Bio</label>
+                <textarea placeholder="Tell something about yourself..."></textarea>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-primary">Save Changes</button>
+              <button class="btn-ghost">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- NOTIFICATIONS -->
+        <div class="tab-panel" id="tab-notifications">
+          <div class="panel-header">
+            <h2>Notification Preferences</h2>
+            <p>Control how and when you receive notifications</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Email Notifications</h3>
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div>
+                  <strong>New Reviews</strong>
+                  <p>Get notified when a new review is posted</p>
+                </div>
+                <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+              <div class="toggle-item">
+                <div>
+                  <strong>Movie Added</strong>
+                  <p>Alerts when a new movie is added to the database</p>
+                </div>
+                <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+              <div class="toggle-item">
+                <div>
+                  <strong>Weekly Summary</strong>
+                  <p>Weekly digest of top rated movies</p>
+                </div>
+                <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+              </div>
+              <div class="toggle-item">
+                <div>
+                  <strong>User Reports</strong>
+                  <p>When a review is flagged by users</p>
+                </div>
+                <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Push Notifications</h3>
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div>
+                  <strong>Browser Alerts</strong>
+                  <p>Real-time browser push notifications</p>
+                </div>
+                <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+              <div class="toggle-item">
+                <div>
+                  <strong>Sound Alerts</strong>
+                  <p>Play sound for new notifications</p>
+                </div>
+                <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- APPEARANCE -->
+        <div class="tab-panel" id="tab-appearance">
+          <div class="panel-header">
+            <h2>Appearance</h2>
+            <p>Customize the look and feel of your dashboard</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Theme</h3>
+            <div class="theme-options">
+              <div class="theme-card active">
+                <div class="theme-preview dark-preview"></div>
+                <span>Dark</span>
+              </div>
+              <div class="theme-card">
+                <div class="theme-preview light-preview"></div>
+                <span>Light</span>
+              </div>
+              <div class="theme-card">
+                <div class="theme-preview auto-preview"></div>
+                <span>Auto</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Accent Color</h3>
+            <div class="color-options">
+              <div class="color-dot active" style="background:#4f8ef7;" title="Blue"></div>
+              <div class="color-dot" style="background:#a855f7;" title="Purple"></div>
+              <div class="color-dot" style="background:#f43f5e;" title="Red"></div>
+              <div class="color-dot" style="background:#22c55e;" title="Green"></div>
+              <div class="color-dot" style="background:#f97316;" title="Orange"></div>
+              <div class="color-dot" style="background:#eab308;" title="Yellow"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Display Options</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Movies Per Page</label>
+                <select>
+                  <option>10</option>
+                  <option selected>20</option>
+                  <option>50</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Default Sort</label>
+                <select>
+                  <option>Rating (High to Low)</option>
+                  <option>Newest First</option>
+                  <option>Alphabetical</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-primary">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRIVACY -->
+        <div class="tab-panel" id="tab-privacy">
+          <div class="panel-header">
+            <h2>Privacy & Security</h2>
+            <p>Manage your privacy settings and data</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Profile Visibility</h3>
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div>
+                  <strong>Public Profile</strong>
+                  <p>Make your profile visible to all users</p>
+                </div>
+                <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+              <div class="toggle-item">
+                <div>
+                  <strong>Show Activity</strong>
+                  <p>Display your recent reviews to others</p>
+                </div>
+                <label class="toggle"><input type="checkbox" /><span class="slider"></span></label>
+              </div>
+              <div class="toggle-item">
+                <div>
+                  <strong>Show Ratings</strong>
+                  <p>Let others see what movies you've rated</p>
+                </div>
+                <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Data & Analytics</h3>
+            <div class="toggle-list">
+              <div class="toggle-item">
+                <div>
+                  <strong>Usage Analytics</strong>
+                  <p>Help improve CineVerse by sharing anonymous usage data</p>
+                </div>
+                <label class="toggle"><input type="checkbox" checked /><span class="slider"></span></label>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-danger">Download My Data</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACCOUNT -->
+        <div class="tab-panel" id="tab-account">
+          <div class="panel-header">
+            <h2>Account Settings</h2>
+            <p>Manage your login credentials and account security</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Change Password</h3>
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label>Current Password</label>
+                <input type="password" placeholder="Enter current password" />
+              </div>
+              <div class="form-group">
+                <label>New Password</label>
+                <input type="password" placeholder="Enter new password" />
+              </div>
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm new password" />
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn-primary">Update Password</button>
+            </div>
+          </div>
+
+          <div class="card danger-card">
+            <h3 class="card-title danger-title">&#9888; Danger Zone</h3>
+            <p class="danger-desc">These actions are permanent and cannot be undone.</p>
+            <div class="danger-actions">
+              <div class="danger-item">
+                <div>
+                  <strong>Deactivate Account</strong>
+                  <p>Temporarily disable your account</p>
+                </div>
+                <button class="btn-warning">Deactivate</button>
+              </div>
+              <div class="danger-item">
+                <div>
+                  <strong>Delete Account</strong>
+                  <p>Permanently delete all your data</p>
+                </div>
+                <button class="btn-danger">Delete Account</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end settings-panels -->
+    </div><!-- end settings-layout -->
+  </main>
+
+  <script>
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const panels  = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    document.querySelectorAll('.theme-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.theme-card').forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+
+    document.querySelectorAll('.color-dot').forEach(dot => {
+      dot.addEventListener('click', () => {
+        document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

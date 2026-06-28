@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieReview &amp; Rating System — Movies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Dashboard-style.css">
+  <link rel="stylesheet" href="Movies-style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-icon">&#127916;</span>
+      <div class="brand-text">
+        <span class="brand-name">Movie<span class="accent">Review</span></span>
+        <span class="brand-sub">&amp; Rating System</span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="Dashboard.html" class="nav-item"><span class="nav-icon">&#127968;</span>Dashboard</a>
+      <a href="Movies.html" class="nav-item active"><span class="nav-icon">&#127909;</span>Movies</a>
+      <a href="Review.html" class="nav-item"><span class="nav-icon">&#128221;</span>Review</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#11088;</span>Ratings</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#9881;</span>Settings</a>
+    </nav>
+    <div class="sidebar-promo">
+      <span class="promo-icon">&#127871;&#127846;</span>
+      <h4>Welcome back!</h4>
+      <p>Explore movies, read reviews and share your thoughts.</p>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <header class="topbar">
+      <div class="topbar-text">
+        <h1>All Movies &#127909;</h1>
+        <p>Browse our complete collection of films across languages.</p>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-box">
+          <span class="search-icon">&#128270;</span>
+          <input type="text" placeholder="Search movies..." id="searchInput">
+        </div>
+        <button class="icon-btn">&#128276;<span class="badge">3</span></button>
+        <div class="profile">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy606CYdQuQNTxOH0mHl6Lxdker4OH8Nvvg&s" alt="Admin">
+          <span>Admin</span><span class="chev">▾</span>
+        </div>
+        <button class="btn-primary">+ Add Movie</button>
+      </div>
+    </header>
+
+    <!-- Language Filter -->
+    <div class="filter-bar">
+      <button class="filter-btn active-filter" data-lang="all">🌐 All</button>
+      <button class="filter-btn" data-lang="tamil">🎬 Tamil</button>
+      <button class="filter-btn" data-lang="malayalam">🎬 Malayalam</button>
+      <button class="filter-btn" data-lang="english">🎬 English</button>
+      <button class="filter-btn" data-lang="hindi">🎬 Hindi</button>
+    </div>
+
+    <!-- ========== TAMIL SECTION ========== -->
+    <div class="section-label" data-section="tamil">
+      <span class="section-flag">🎭</span> Tamil Films
+    </div>
+    <div class="movies-featured" data-lang-section="tamil">
+
+      <!-- Featured: Vikram (horizontal) -->
+      <div class="movie-featured-card" data-lang="tamil">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JUrgWyFri6wC7neU__yPaQIJyWQ3wrQ3FFCXXVsP9A&s=10" alt="Jana Nayagan">
+        <div class="featured-info">
+          <div class="lang-tag tag-tamil">Tamil</div>
+          <h2>Jana Nayagan</h2>
+          <p class="feat-meta">2026 · 183 min · Action</p>
+          <div class="feat-stars">★★★★★ <span>4.6</span></div>
+          <p class="feat-desc">Thalapathy Vijay's grand farewell — a high-octane political action entertainer that swept the nation off its feet. A fitting tribute to a legendary career.</p>
+          <a href="Jana Nayagan.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+      <!-- Featured: Jawan (horizontal) -->
+      <div class="movie-featured-card" data-lang="tamil">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ97v_59AKV3Ju0DqjzcNz3HX3FzkFYiBlN5keeXmNV9A&s=10" alt="Jawan">
+        <div class="featured-info">
+          <div class="lang-tag tag-tamil">Tamil</div>
+          <h2>Jawan</h2>
+          <p class="feat-meta">2023 · 169 min · Action / Thriller</p>
+          <div class="feat-stars">★★★★★ <span>4.5</span></div>
+          <p class="feat-desc">Shah Rukh Khan's blockbuster comeback directed by Atlee. A gripping tale of a warden and his inmates taking on a corrupt system — packed with mass moments.</p>
+          <a href="Jawan.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== MALAYALAM SECTION ========== -->
+    <div class="section-label" data-section="malayalam">
+      <span class="section-flag">🌴</span> Malayalam Films
+    </div>
+    <div class="movies-grid" data-lang-section="malayalam">
+
+      <div class="movie-featured-card" data-lang="malayalam">
+        <div class="mov-poster">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr701ueLsUN7i9AGv1H9b2WZRt_49UxYF6cwRXIPLuWg&s=10" alt="Premalu">
+          <span class="mov-rating">★ 4.7</span>
+          <div class="lang-badge tag-malayalam">Malayalam</div>
+        </div>
+        <div class="mov-info">
+          <h4>Premalu</h4>
+          <p>2024 · 152 min · Romance / Comedy</p>
+          <a href="#"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+      <div class="movie-featured-card" data-lang="malayalam">
+        <div class="mov-poster">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlV1it0WoRtiL0rvBDgL0pP43vp-CEknp2gpX1N9tscg&s=10" alt="Vaazha-2">
+          <span class="mov-rating">★ 4.8</span>
+          <div class="lang-badge tag-malayalam">Malayalam</div>
+        </div>
+        <div class="mov-info">
+          <h4>Manjummel Boys</h4>
+          <p>2024 · 157 min · Survival / comedy /emotion</p>
+          <a href="#"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========== ENGLISH SECTION ========== -->
+    <div class="section-label" data-section="english">
+      <span class="section-flag">🌍</span> English Films
+    </div>
+    <div class="movies-grid" data-lang-section="english">
+
+      <div class="movie-featured-card" data-lang="english">
+        <div class="mov-poster">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuAaFoBHE4wG7f_lCVqR_P7U1gVxVySQmSrSY_YtF7BA&s=10" alt="Interstellar">
+          <span class="mov-rating">★ 4.8</span>
+          <div class="lang-badge tag-english">English</div>
+        </div>
+        <div class="mov-info">
+          <h4>Interstellar</h4>
+          <p>2014 · 169 min · Sci-Fi / Drama</p>
+          <a href="Interstellar.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+      <div class="movie-featured-card" data-lang="english">
+        <div class="mov-poster">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRlwlRcdHIDVihdm4cbh55FYdwmGjOZQOdeGVoR4GvSw&s=10" alt="Spider-Man No Way Home">
+          <span class="mov-rating">★ 4.9</span>
+          <div class="lang-badge tag-english">English</div>
+        </div>
+        <div class="mov-info">
+          <h4>Spider-Man: No Way Home</h4>
+          <p>2021 · 148 min · Action / Superhero</p>
+          <a href="Spider man.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========== HINDI SECTION ========== -->
+    <div class="section-label" data-section="hindi">
+      <span class="section-flag">🎪</span> Hindi Films
+    </div>
+    <div class="movies-grid" data-lang-section="hindi">
+
+      <div class="movie-featured-card" data-lang="hindi">
+        <div class="mov-poster">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5EVKzT7Q76aQO20t933sVRyMaKFlnNaSNqCfkl51YMw&s=10" alt="RRR">
+          <span class="mov-rating">★ 4.7</span>
+          <div class="lang-badge tag-hindi">Hindi</div>
+        </div>
+        <div class="mov-info">
+          <h4>RRR</h4>
+          <p>2022 · 187 min · Action / Drama</p>
+          <a href="RRR.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+      <div class="movie-featured-card" data-lang="hindi">
+        <div class="mov-poster">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLUbgB4Uig256VPMAMvPGB5xGFropWj0jpADzUuD5xqE81AEHKLabe1w&s=10" alt="Avatar">
+          <span class="mov-rating">★ 4.6</span>
+          <div class="lang-badge tag-hindi">Hindi</div>
+        </div>
+        <div class="mov-info">
+          <h4>Avatar: The Way of Water</h4>
+          <p>2022 · 192 min · Sci-Fi / Adventure</p>
+          <a href="Avatar.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========== ALL OTHER MOVIES GRID ========== -->
+    <div class="section-label">
+      <span class="section-flag">🎞️</span> More Movies
+    </div>
+    <div class="movies-grid">
+
+      <div class="movie-featured-card" data-lang="tamil">
+        <div class="mov-poster">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXC1GaGBrzXpQ8bHFbmM0HRzdvqNlKZe7udoX5nUXnZA&s=10" alt="Family Business">
+          <span class="mov-rating">★ 4.3</span>
+          <div class="lang-badge tag-tamil">Tamil</div>
+        </div>
+        <div class="mov-info">
+          <h4>Family Business</h4>
+          <p>2026 · Comedy / Drama</p>
+          <a href="Family Business.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+      <div class="movie-featured-card" data-lang="english">
+        <div class="mov-poster">
+          <img src="https://variety.com/wp-content/uploads/2026/06/EN-US_MJOT_Main_Vertical_4x5_RGB_PREDATE.jpg?w=1000&h=667&crop=1" alt="Michael Jackson">
+          <span class="mov-rating">★ 4.5</span>
+          <div class="lang-badge tag-english">English</div>
+        </div>
+        <div class="mov-info">
+          <h4>Michael Jackson: The Verdict</h4>
+          <p>2026 · Biography / Drama</p>
+          <a href="Michael jackson.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+      <div class="movie-featured-card" data-lang="tamil">
+        <div class="mov-poster">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUOmX8sbRzob2cAI3xHJDb5Q5v28yMCVAjJbnNvKi-A&s=10" alt="LIK">
+          <span class="mov-rating">★ 4.4</span>
+          <div class="lang-badge tag-tamil">Tamil</div>
+        </div>
+        <div class="mov-info">
+          <h4>LIK</h4>
+          <p>2026 · Action / Romance</p>
+          <a href="LIK.html"><button class="details-btn">View Details</button></a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+<script>
+  // Filter by language
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
+      btn.classList.add('active-filter');
+
+      const lang = btn.dataset.lang;
+
+      // Show/hide section labels
+      document.querySelectorAll('.section-label').forEach(label => {
+        const sec = label.dataset.section;
+        if (!sec) { label.style.display = (lang === 'all') ? 'flex' : 'none'; return; }
+        label.style.display = (lang === 'all' || lang === sec) ? 'flex' : 'none';
+      });
+
+      // Show/hide featured sections
+      document.querySelectorAll('.movies-featured').forEach(sec => {
+        const secLang = sec.dataset.langSection;
+        sec.style.display = (lang === 'all' || lang === secLang) ? 'block' : 'none';
+      });
+
+      // Show/hide grid sections
+      document.querySelectorAll('.movies-grid[data-lang-section]').forEach(sec => {
+        const secLang = sec.dataset.langSection;
+        sec.style.display = (lang === 'all' || lang === secLang) ? 'grid' : 'none';
+      });
+
+      // Show/hide individual cards in "More Movies"
+      document.querySelectorAll('.movies-grid:not([data-lang-section]) .mov-card').forEach(card => {
+        const cardLang = card.dataset.lang;
+        card.style.display = (lang === 'all' || lang === cardLang) ? 'block' : 'none';
+      });
+    });
+  });
+
+  // Search
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const val = this.value.toLowerCase();
+    document.querySelectorAll('.mov-card, .movie-featured-card').forEach(card => {
+      const title = card.querySelector('h2,h4')?.textContent.toLowerCase() || '';
+      card.style.display = title.includes(val) ? '' : 'none';
+    });
+  });
+</script>
+
+</body>
+</html>

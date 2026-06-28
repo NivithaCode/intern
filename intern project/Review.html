@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieReview & Rating System — Reviews</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Dashboard-style.css">
+  <link rel="stylesheet" href="Review-style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-icon">&#127916;</span>
+      <div class="brand-text">
+        <span class="brand-name">Movie<span class="accent">Review</span></span>
+        <span class="brand-sub">&amp; Rating System</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="Dashboard.html" class="nav-item"><span class="nav-icon">&#127968;</span>Dashboard</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#127909;</span>Movies</a>
+      <a href="Review.html" class="nav-item active"><span class="nav-icon">&#128221;</span>Review</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#11088;</span>Ratings</a>
+      <a href="#" class="nav-item"><span class="nav-icon">&#9881;</span>Settings</a>
+    </nav>
+
+    <div class="sidebar-promo">
+      <span class="promo-icon">&#127871;&#127846;</span>
+      <h4>Welcome back!</h4>
+      <p>Explore movies, read reviews and share your thoughts.</p>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-text">
+        <h1>Movie Reviews <span class="wave">&#128221;</span></h1>
+        <p>What the community is saying about their favourite films.</p>
+      </div>
+      <div class="topbar-actions">
+        <div class="search-box">
+          <span class="search-icon">&#128270;</span>
+          <input type="text" placeholder="Search reviews...">
+        </div>
+        <button class="icon-btn" aria-label="Notifications">&#128276;<span class="badge">3</span></button>
+        <div class="profile">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy606CYdQuQNTxOH0mHl6Lxdker4OH8Nvvg&s" alt="Admin">
+          <span>Admin</span>
+          <span class="chev">▾</span>
+        </div>
+        <button class="btn-primary" id="openModalBtn">+ Write Review</button>
+      </div>
+    </header>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active-filter">All</button>
+      <button class="filter-btn">&#11088; 5 Stars</button>
+      <button class="filter-btn">&#11088; 4 Stars</button>
+      <button class="filter-btn">&#11088; 3 Stars</button>
+      <button class="filter-btn">Latest</button>
+      <button class="filter-btn">Top Liked</button>
+    </div>
+
+    <!-- Review Cards Grid -->
+    <section class="review-grid">
+
+      <div class="rev-card">
+        <div class="rev-card-header">
+          <img src="https://www.shutterstock.com/image-vector/boy-happy-mode-emoji-style-260nw-2483002039.jpg" alt="Karthik" class="rev-avatar">
+          <div class="rev-user-info">
+            <span class="rev-username">Karthik</span>
+            <span class="rev-date">June 28, 2026</span>
+          </div>
+          <div class="rev-stars">★★★★<span class="empty-star">★</span></div>
+        </div>
+        <div class="rev-movie-tag">&#127909; Jawan (2023)</div>
+        <p class="rev-text">"An absolute blockbuster! Shah Rukh Khan's comeback was phenomenal. The action sequences were mind-blowing and the storyline had real emotional depth."</p>
+        <div class="rev-footer">
+          <button class="like-btn">&#10084; 24 Likes</button>
+          <span class="rev-badge badge-action">Action</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-card-header">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNspJ890EiQagS59LOMaHWO9GuSyFd2Ev-R5luI7uylw&s=10" alt="Neha" class="rev-avatar">
+          <div class="rev-user-info">
+            <span class="rev-username">Neha</span>
+            <span class="rev-date">June 25, 2026</span>
+          </div>
+          <div class="rev-stars">★★★<span class="empty-star">★★</span></div>
+        </div>
+        <div class="rev-movie-tag">&#127909; RRR (2022)</div>
+        <p class="rev-text">"Visually stunning and emotionally charged. SS Rajamouli created something truly epic. The Naatu Naatu sequence alone is worth watching the whole film!"</p>
+        <div class="rev-footer">
+          <button class="like-btn">&#10084; 18 Likes</button>
+          <span class="rev-badge badge-drama">Drama</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-card-header">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgsGfvrVl9-MOepsnLGdvl0Og2ZpOFCQj-yBQjBOXikA&s=10" alt="Ananya" class="rev-avatar">
+          <div class="rev-user-info">
+            <span class="rev-username">Ananya</span>
+            <span class="rev-date">June 22, 2026</span>
+          </div>
+          <div class="rev-stars">★★★★<span class="empty-star">★</span></div>
+        </div>
+        <div class="rev-movie-tag">&#127909; Jana Nayagan (2026)</div>
+        <p class="rev-text">"Thalapathy Vijay's farewell film was nothing short of spectacular. A fitting tribute to a legendary career. The mass moments gave me goosebumps!"</p>
+        <div class="rev-footer">
+          <button class="like-btn">&#10084; 41 Likes</button>
+          <span class="rev-badge badge-action">Action</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-card-header">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFBvFXDS621VuM7U-6vxYGJpzcPf-k0VgjdEns37PHWw&s=10" alt="Rahul" class="rev-avatar">
+          <div class="rev-user-info">
+            <span class="rev-username">Rahul</span>
+            <span class="rev-date">June 20, 2026</span>
+          </div>
+          <div class="rev-stars">★★★★<span class="empty-star">★</span></div>
+        </div>
+        <div class="rev-movie-tag">&#127909; Avatar: The Way of Water (2022)</div>
+        <p class="rev-text">"James Cameron delivered a visual masterpiece. The underwater scenes were breathtaking. A cinematic experience like no other — watch it on the biggest screen possible!"</p>
+        <div class="rev-footer">
+          <button class="like-btn">&#10084; 33 Likes</button>
+          <span class="rev-badge badge-scifi">Sci-Fi</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-card-header">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXC1GaGBrzXpQ8bHFbmM0HRzdvqNlKZe7udoX5nUXnZA&s=10" alt="Sanjay" class="rev-avatar">
+          <div class="rev-user-info">
+            <span class="rev-username">Sanjay</span>
+            <span class="rev-date">June 18, 2026</span>
+          </div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+        <div class="rev-movie-tag">&#127909; Interstellar (2014)</div>
+        <p class="rev-text">"Christopher Nolan's magnum opus. A film that makes you question time, love, and the universe itself. Hans Zimmer's score is absolutely transcendent. 10/10!"</p>
+        <div class="rev-footer">
+          <button class="like-btn">&#10084; 57 Likes</button>
+          <span class="rev-badge badge-scifi">Sci-Fi</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-card-header">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRlwlRcdHIDVihdm4cbh55FYdwmGjOZQOdeGVoR4GvSw&s=10" alt="Priya" class="rev-avatar">
+          <div class="rev-user-info">
+            <span class="rev-username">Priya</span>
+            <span class="rev-date">June 15, 2026</span>
+          </div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+        <div class="rev-movie-tag">&#127909; Spider-Man: No Way Home (2021)</div>
+        <p class="rev-text">"The multiverse madness was handled perfectly. Seeing all three Spider-Men together was the most emotional movie moment I've ever experienced in a theatre!"</p>
+        <div class="rev-footer">
+          <button class="like-btn">&#10084; 62 Likes</button>
+          <span class="rev-badge badge-action">Action</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<!-- Write Review Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>&#128221; Write a Review</h2>
+      <button class="modal-close" id="closeModalBtn">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Select Movie</label>
+        <select>
+          <option>Jawan (2023)</option>
+          <option>RRR (2022)</option>
+          <option>Jana Nayagan (2026)</option>
+          <option>Avatar: The Way of Water (2022)</option>
+          <option>Interstellar (2014)</option>
+          <option>Spider-Man: No Way Home (2021)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Rating</label>
+        <div class="star-select">
+          <span class="star-opt" data-val="1">★</span>
+          <span class="star-opt" data-val="2">★</span>
+          <span class="star-opt" data-val="3">★</span>
+          <span class="star-opt" data-val="4">★</span>
+          <span class="star-opt" data-val="5">★</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Your Review</label>
+        <textarea placeholder="Share your thoughts about this movie..."></textarea>
+      </div>
+      <button class="btn-submit">Submit Review &#128640;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const openBtn = document.getElementById('openModalBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const overlay = document.getElementById('modalOverlay');
+
+  openBtn.addEventListener('click', () => overlay.classList.add('show'));
+  closeBtn.addEventListener('click', () => overlay.classList.remove('show'));
+  overlay.addEventListener('click', (e) => { if(e.target === overlay) overlay.classList.remove('show'); });
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
+      btn.classList.add('active-filter');
+    });
+  });
+
+  // Star select
+  const stars = document.querySelectorAll('.star-opt');
+  stars.forEach((star, i) => {
+    star.addEventListener('click', () => {
+      stars.forEach((s, j) => s.classList.toggle('selected', j <= i));
+    });
+  });
+
+  // Like button
+  document.querySelectorAll('.like-btn').forEach(btn => {
+    btn.addEventListener('click', () => btn.classList.toggle('liked'));
+  });
+</script>
+
+</body>
+</html>
