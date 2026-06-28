@@ -1,59 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Interstellar Details</title>
-
-<link rel="stylesheet" href="Dashboard-style.css">
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interstellar – MovieReview</title>
+  <link rel="stylesheet" href="interstellar.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
 
-<div class="movie-details">
+  <!-- Back Button -->
+  <a href="Dashboard.html" class="back-btn">← Back to Dashboard</a>
 
-    <img src="INTERSTELLAR_IMAGE_LINK" alt="Interstellar Poster">
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
 
-    <h1>Interstellar</h1>
+      <div class="movie-poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg" alt="Interstellar Poster"/>
+      </div>
 
-    <p>⭐ Rating: 4.8 / 5</p>
+      <div class="movie-info">
+        <div class="badge">2014 · Sci-Fi · Drama · Adventure</div>
+        <h1 class="movie-title">Interstellar</h1>
+        <div class="meta-row">
+          <span>⏱ 169 min</span>
+          <span>🌐 English</span>
+          <span>📅 2014</span>
+        </div>
+        <div class="rating-row">
+          <div class="big-rating">⭐ 4.7</div>
+          <div class="rating-count" id="review-count">2,541 reviews</div>
+        </div>
+        <p class="movie-desc">
+          A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
+          Directed by Christopher Nolan, featuring an unforgettable score by Hans Zimmer and a story that bends time itself.
+        </p>
+        <div class="action-btns">
+          <button class="btn-ghost">🔖 Watchlist</button>
+        </div>
+      </div>
 
-    <p>Year: 2014</p>
+    </div>
+  </div>
 
-    <p>Duration: 169 minutes</p>
+  <!-- Details Section -->
+  <div class="details-section">
 
-    <p>Genre: Sci-Fi, Adventure, Drama</p>
+    <!-- Cast -->
+    <div class="card">
+      <h3 class="card-title">🎭 Cast</h3>
+      <div class="cast-grid">
+        <div class="cast-item">
+          <div class="cast-avatar av-m">M</div>
+          <span>Matthew McConaughey</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-a">A</div>
+          <span>Anne Hathaway</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-j">J</div>
+          <span>Jessica Chastain</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-mi">M</div>
+          <span>Michael Caine</span>
+        </div>
+      </div>
+    </div>
 
+    <!-- Ratings Breakdown -->
+    <div class="card">
+      <h3 class="card-title">⭐ Ratings Breakdown</h3>
+      <div class="rating-bars">
+        <div class="bar-row">
+          <span>5 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:65%; background:#22c55e;"></div>
+          </div>
+          <span>65%</span>
+        </div>
+        <div class="bar-row">
+          <span>4 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:22%; background:#4f8ef7;"></div>
+          </div>
+          <span>22%</span>
+        </div>
+        <div class="bar-row">
+          <span>3 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:8%; background:#f59e0b;"></div>
+          </div>
+          <span>8%</span>
+        </div>
+        <div class="bar-row">
+          <span>2 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:3%; background:#f97316;"></div>
+          </div>
+          <span>3%</span>
+        </div>
+        <div class="bar-row">
+          <span>1 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:2%; background:#f43f5e;"></div>
+          </div>
+          <span>2%</span>
+        </div>
+      </div>
+    </div>
 
-    <h3>Director</h3>
-    <p>Christopher Nolan</p>
+    <!-- Recent Reviews -->
+    <div class="card full-width">
+      <div class="reviews-header">
+        <h3 class="card-title">💬 Recent Reviews</h3>
+        <button class="btn-primary" onclick="openModal()">+ Add Review</button>
+      </div>
 
+      <div class="reviews-list" id="reviews-list">
 
-    <h3>Cast</h3>
-    <p>
-    Matthew McConaughey<br>
-    Anne Hathaway<br>
-    Jessica Chastain
-    </p>
+        <div class="review-item">
+          <div class="review-avatar av-s">S</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Sathish</strong>
+              <span class="stars">★★★★★</span>
+              <span class="time">1h ago</span>
+            </div>
+            <p>No words to describe this film. The docking scene, the wave planet, the tesseract — pure genius. Nolan at his absolute best!</p>
+          </div>
+        </div>
 
+        <div class="review-item">
+          <div class="review-avatar av-d">D</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Divya</strong>
+              <span class="stars">★★★★★</span>
+              <span class="time">4h ago</span>
+            </div>
+            <p>Hans Zimmer's score alone gives goosebumps. The father-daughter story hit me emotionally so hard. A true masterpiece.</p>
+          </div>
+        </div>
 
-    <h3>About Movie</h3>
-    <p>
-    Interstellar follows a group of astronauts who travel
-    through a wormhole near Saturn in search of a new home
-    for humanity.
-    </p>
+        <div class="review-item">
+          <div class="review-avatar av-v">V</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Vikram</strong>
+              <span class="stars">★★★★</span>
+              <span class="time">2d ago</span>
+            </div>
+            <p>Mind-bending concept and stunning visuals. The science is complex but the emotion keeps you hooked throughout!</p>
+          </div>
+        </div>
 
+      </div>
+    </div>
 
-    <h3>User Reviews</h3>
+  </div>
 
-    <p>★★★★★ Masterpiece with amazing visuals!</p>
-    <p>★★★★ Great story and emotional moments.</p>
+  <!-- Modal -->
+  <div id="reviewModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999;">
+    <div style="background:#111527; border-radius:16px; padding:28px; width:400px; margin:100px auto;">
+      <h3 style="color:white; margin-bottom:20px;">Add Review</h3>
 
+      <p style="color:gray; margin-bottom:6px;">Name</p>
+      <input id="rName" type="text" placeholder="Your name..."
+        style="width:100%; padding:10px; background:#0d0f1a; color:white; border:1px solid #333; border-radius:8px; margin-bottom:15px;"/>
 
-</div>
+      <p style="color:gray; margin-bottom:6px;">Review</p>
+      <textarea id="rText" placeholder="Share your thoughts about Interstellar..."
+        style="width:100%; padding:10px; background:#0d0f1a; color:white; border:1px solid #333; border-radius:8px; height:80px;"></textarea>
+
+      <br/><br/>
+      <button onclick="submitReview()"
+        style="background:#4f8ef7; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">
+        Submit
+      </button>
+      <button onclick="closeModal()"
+        style="background:gray; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-left:10px;">
+        Cancel
+      </button>
+    </div>
+  </div>
+
+  <script>
+    var totalReviews = 2541;
+
+    function openModal() {
+      document.getElementById('reviewModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('reviewModal').style.display = 'none';
+    }
+
+    function submitReview() {
+      var name = document.getElementById('rName').value;
+      var text = document.getElementById('rText').value;
+
+      if (name == '' || text == '') {
+        alert('Please fill all fields!');
+        return;
+      }
+
+      var initial = name[0].toUpperCase();
+
+      var newReview =
+        '<div class="review-item">' +
+          '<div class="review-avatar">' + initial + '</div>' +
+          '<div class="review-body">' +
+            '<div class="review-top">' +
+              '<strong>' + name + '</strong>' +
+              '<span class="time">Just now</span>' +
+            '</div>' +
+            '<p>' + text + '</p>' +
+          '</div>' +
+        '</div>';
+
+      var list = document.getElementById('reviews-list');
+      list.innerHTML = newReview + list.innerHTML;
+
+      totalReviews++;
+      document.getElementById('review-count').textContent = totalReviews.toLocaleString() + ' reviews';
+
+      closeModal();
+      document.getElementById('rName').value = '';
+      document.getElementById('rText').value = '';
+    }
+  </script>
 
 </body>
 </html>

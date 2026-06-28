@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reviews Over Time</title>
+  <link rel="stylesheet" href="reviews_style.css" />
+</head>
+<body>
+
+  <div class="chart-container">
+    <div class="chart-header">
+      <h2 class="chart-title">Reviews Over Time</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn" data-filter="week">This Week</button>
+        <button class="filter-btn" data-filter="month">This Month</button>
+        <button class="filter-btn active" data-filter="year">This Year</button>
+      </div>
+    </div>
+
+    <div class="chart-wrapper">
+      <canvas id="reviewsChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script>
+    const datasets = {
+      week: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        data: [5, 8, 6, 12, 10, 18, 15]
+      },
+      month: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        data: [30, 52, 45, 70]
+      },
+      year: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        data: [20, 35, 28, 50, 42, 65, 58, 72, 60, 85, 78, 95]
+      }
+    };
+
+    const ctx = document.getElementById('reviewsChart').getContext('2d');
+
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: datasets.year.labels,
+        datasets: [{
+          label: 'Reviews',
+          data: datasets.year.data,
+          borderColor: '#7c83f5',
+          backgroundColor: 'rgba(124, 131, 245, 0.15)',
+          borderWidth: 2.5,
+          pointBackgroundColor: '#7c83f5',
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          tension: 0.4,
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#1e1e3a',
+            titleColor: '#a0a8ff',
+            bodyColor: '#ffffff',
+            borderColor: '#7c83f5',
+            borderWidth: 1,
+            padding: 10
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#a0a8ff', font: { size: 13 } },
+            grid: { color: 'rgba(124,131,245,0.08)' }
+          },
+          y: {
+            ticks: { color: '#a0a8ff', font: { size: 13 } },
+            grid: { color: 'rgba(124,131,245,0.08)' },
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Filter button click logic
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        chart.data.labels = datasets[filter].labels;
+        chart.data.datasets[0].data = datasets[filter].data;
+        chart.update();
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,57 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>RRR Details</title>
-
-<link rel="stylesheet" href="Dashboard-style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RRR - Movie Review</title>
+  <link rel="stylesheet" href="RRR-style.css" />
 </head>
-
 <body>
 
-<div class="movie-details">
+  <!-- TOP NAV -->
+  <div class="topbar">← Back to Dashboard</div>
 
-    <img src="RRR_IMAGE_LINK" alt="RRR Poster">
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div class="movie-poster">RRR</div>
 
-    <h1>RRR</h1>
+    <div class="movie-info">
+      <div class="genre-tags">
+        <span class="tag">2022</span>
+        <span class="tag">Action</span>
+        <span class="tag">Epic</span>
+        <span class="tag">Period</span>
+      </div>
 
-    <p>⭐ Rating: 4.7 / 5</p>
+      <h1 class="movie-title">RRR</h1>
 
-    <p>Year: 2022</p>
+      <div class="movie-meta">
+        <span>⏱ 182 min</span>
+        <span class="meta-dot">●</span>
+        <span>Telugu</span>
+        <span class="meta-dot">●</span>
+        <span>🎬 25 Mar 2022</span>
+      </div>
 
-    <p>Duration: 187 minutes</p>
+      <div class="rating-display">
+        <span class="star-icon">★</span>
+        <span class="rating-number" id="avg-rating">4.8</span>
+        <span class="review-count" id="review-count">1,842 reviews</span>
+      </div>
 
-    <p>Genre: Action, Drama</p>
+      <p class="movie-description">
+        Two legendary revolutionaries — Alluri Sitarama Raju and Komaram Bheem — join forces
+        against the British Raj in a fictional tale of fire, fury, and friendship. Directed by
+        S. S. Rajamouli. Oscar-winning "Naatu Naatu" featured.
+      </p>
 
+      <div class="action-buttons">
+        <button class="btn-primary" onclick="openModal()">+ Add Review</button>
+        <button class="btn-secondary">🔖 Watchlist</button>
+      </div>
+    </div>
+  </div>
 
-    <h3>Director</h3>
-    <p>S. S. Rajamouli</p>
+  <!-- CAST + RATINGS SECTION -->
+  <div class="details-section">
 
+    <!-- CAST CARD -->
+    <div class="card">
+      <div class="card-title">🎭 Cast</div>
+      <div class="cast-grid">
+        <div class="cast-member">
+          <div class="cast-avatar av-r">R</div>
+          <span class="cast-name">Ram Charan</span>
+        </div>
+        <div class="cast-member">
+          <div class="cast-avatar av-j">J</div>
+          <span class="cast-name">Jr. NTR</span>
+        </div>
+        <div class="cast-member">
+          <div class="cast-avatar av-a">A</div>
+          <span class="cast-name">Alia Bhatt</span>
+        </div>
+        <div class="cast-member">
+          <div class="cast-avatar av-s">A</div>
+          <span class="cast-name">Ajay Devgn</span>
+        </div>
+      </div>
+    </div>
 
-    <h3>Cast</h3>
-    <p>
-    N. T. Rama Rao Jr.<br>
-    Ram Charan<br>
-    Alia Bhatt
-    </p>
+    <!-- RATINGS BREAKDOWN CARD -->
+    <div class="card">
+      <div class="card-title">★ Ratings Breakdown</div>
 
+      <div class="rating-row">
+        <span class="rating-label">5★</span>
+        <div class="bar-track"><div class="bar-fill bar-5"></div></div>
+        <span class="bar-pct">62%</span>
+      </div>
+      <div class="rating-row">
+        <span class="rating-label">4★</span>
+        <div class="bar-track"><div class="bar-fill bar-4"></div></div>
+        <span class="bar-pct">22%</span>
+      </div>
+      <div class="rating-row">
+        <span class="rating-label">3★</span>
+        <div class="bar-track"><div class="bar-fill bar-3"></div></div>
+        <span class="bar-pct">10%</span>
+      </div>
+      <div class="rating-row">
+        <span class="rating-label">2★</span>
+        <div class="bar-track"><div class="bar-fill bar-2"></div></div>
+        <span class="bar-pct">4%</span>
+      </div>
+      <div class="rating-row">
+        <span class="rating-label">1★</span>
+        <div class="bar-track"><div class="bar-fill bar-1"></div></div>
+        <span class="bar-pct">2%</span>
+      </div>
+    </div>
+  </div>
 
-    <h3>About Movie</h3>
-    <p>
-    RRR is an epic action drama film about two legendary
-    revolutionaries and their friendship during the British era.
-    </p>
+  <!-- RECENT REVIEWS SECTION -->
+  <div class="reviews-section">
+    <div class="section-title">💬 Recent Reviews</div>
+    <div class="reviews-list" id="reviews-list">
 
+      <div class="review-item">
+        <div class="reviewer-avatar rv-k">K</div>
+        <div class="review-content">
+          <div class="reviewer-header">
+            <span class="reviewer-name">Karthik</span>
+            <span class="review-time">2h ago</span>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Rajamouli outdid himself! The interval block with fire and water is pure cinema magic. NTR and Ram Charan are UNSTOPPABLE together.</p>
+        </div>
+      </div>
 
-    <h3>User Reviews</h3>
+      <div class="review-item">
+        <div class="reviewer-avatar rv-p">P</div>
+        <div class="review-content">
+          <div class="reviewer-header">
+            <span class="reviewer-name">Priya</span>
+            <span class="review-time">5h ago</span>
+          </div>
+          <div class="review-stars">★★★★</div>
+          <p class="review-text">Naatu Naatu scene gives goosebumps every single time. Oscar was 100% deserved. Alia Bhatt was sweet as Sita.</p>
+        </div>
+      </div>
 
-    <p>★★★★★ Amazing action and story!</p>
-    <p>★★★★ Great visuals and performance.</p>
+      <div class="review-item">
+        <div class="reviewer-avatar rv-r">R</div>
+        <div class="review-content">
+          <div class="reviewer-header">
+            <span class="reviewer-name">Rahul</span>
+            <span class="review-time">1d ago</span>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Best Indian film of the decade. The train sequence, the tiger, the songs — everything is 10/10. Must watch for every film lover.</p>
+        </div>
+      </div>
 
-</div>
+    </div>
+  </div>
+
+  <!-- ADD REVIEW MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-title">+ Add Your Review</div>
+
+      <label>Your Name</label>
+      <input type="text" id="reviewer-name" placeholder="e.g. Arun" />
+
+      <label>Your Rating</label>
+      <div class="star-selector" id="star-selector">
+        <button class="star-btn" data-val="1" onclick="setRating(1)">★</button>
+        <button class="star-btn" data-val="2" onclick="setRating(2)">★</button>
+        <button class="star-btn" data-val="3" onclick="setRating(3)">★</button>
+        <button class="star-btn" data-val="4" onclick="setRating(4)">★</button>
+        <button class="star-btn" data-val="5" onclick="setRating(5)">★</button>
+      </div>
+
+      <label>Your Review</label>
+      <textarea id="review-text" rows="4" placeholder="Share your thoughts about RRR..."></textarea>
+
+      <div class="modal-actions">
+        <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn-primary" onclick="submitReview()">Submit Review</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast">✅ Review added successfully!</div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    let selectedRating = 0;
+    let totalReviews = 1842;
+
+    const avatarColors = ['#1f6feb','#3fb950','#f0a500','#db61a2','#f85149','#58a6ff'];
+
+    function openModal() {
+      document.getElementById('modal-overlay').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('active');
+      document.getElementById('reviewer-name').value = '';
+      document.getElementById('review-text').value = '';
+      selectedRating = 0;
+      updateStars();
+    }
+
+    function setRating(val) {
+      selectedRating = val;
+      updateStars();
+    }
+
+    function updateStars() {
+      document.querySelectorAll('.star-btn').forEach(btn => {
+        if (parseInt(btn.dataset.val) <= selectedRating) {
+          btn.classList.add('selected');
+        } else {
+          btn.classList.remove('selected');
+        }
+      });
+    }
+
+    function submitReview() {
+      const name = document.getElementById('reviewer-name').value.trim();
+      const text = document.getElementById('review-text').value.trim();
+
+      if (!name)          { alert('Please enter your name!');         return; }
+      if (!selectedRating){ alert('Please select a star rating!');    return; }
+      if (!text)          { alert('Please write your review!');       return; }
+
+      const stars = '★'.repeat(selectedRating) + '☆'.repeat(5 - selectedRating);
+      const color  = avatarColors[Math.floor(Math.random() * avatarColors.length)];
+      const initial = name.charAt(0).toUpperCase();
+
+      const reviewItem = document.createElement('div');
+      reviewItem.className = 'review-item new-review';
+      reviewItem.innerHTML = `
+        <div class="reviewer-avatar" style="background-color:${color}">${initial}</div>
+        <div class="review-content">
+          <div class="reviewer-header">
+            <span class="reviewer-name">${name}</span>
+            <span class="review-time">Just now</span>
+          </div>
+          <div class="review-stars">${stars}</div>
+          <p class="review-text">${text}</p>
+        </div>
+      `;
+
+      const list = document.getElementById('reviews-list');
+      list.insertBefore(reviewItem, list.firstChild);
+
+      totalReviews++;
+      document.getElementById('review-count').textContent = totalReviews.toLocaleString() + ' reviews';
+
+      closeModal();
+      showToast();
+    }
+
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 3000);
+    }
+
+    document.getElementById('modal-overlay').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+  </script>
 
 </body>
 </html>

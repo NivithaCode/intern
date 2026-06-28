@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="search-style.css"/>
+</head>
+<body>
+
+<div class="search-wrapper">
+  <div class="search-bar">
+    <span>🔍</span>
+    <input type="text" id="searchInput" 
+           placeholder="Search movies..." 
+           onkeyup="searchMovies()"/>
+    <button onclick="document.getElementById('searchInput').value='';
+                     document.getElementById('resultsBox').innerHTML=''">✕</button>
+  </div>
+  <div id="resultsBox"></div>
+</div>
+
+<script>
+var movies = ["Jawan","RRR","Jana Nayagan","Avatar","Interstellar","LIK","vaazha 2","Family business","Spider man"];
+
+function searchMovies() {
+  var input = document.getElementById('searchInput').value;
+  var box = document.getElementById('resultsBox');
+  box.innerHTML = '';
+  
+  if (input == '') return;
+  
+  for (var i = 0; i < movies.length; i++) {
+    if (movies[i].toLowerCase().indexOf(input.toLowerCase()) != -1) {
+      var div = document.createElement('div');
+      div.innerText = '🎬 ' + movies[i];
+      div.style.padding = '10px 14px';
+      div.style.color = '#e2e8f0';
+      div.style.cursor = 'pointer';
+      div.style.borderBottom = '1px solid #1a1f35';
+      div.style.fontSize = '13px';
+      div.setAttribute('onclick', "window.location.href='" + movies[i] + ".html'");
+      box.appendChild(div);
+    }
+  }
+}
+</script>
+</body>
+</html>

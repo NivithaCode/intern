@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Movie Review</title>
+
+<link rel="stylesheet" href="mood-tracker.css">
+
+</head>
+
+<body>
+
+
+<div class="review-card">
+
+
+<h2>🎬 Movie Review</h2>
+
+
+<label>Movie Name</label>
+
+<select id="movie">
+
+<option>Interstellar</option>
+<option>RRR</option>
+<option>Jawan</option>
+<option>Avatar: The Way Of Water</option>
+<option>Jana Nayagan</option>
+
+</select>
+
+
+
+<label>Your Review</label>
+
+<textarea placeholder="Write your review here..."></textarea>
+
+<label>Your Mood</label>
+
+<div class="mood-box">
+
+<button type="button" onclick="selectMood('😊')">😊</button>
+<button type="button" onclick="selectMood('😍')">😍</button>
+<button type="button" onclick="selectMood('😢')">😢</button>
+<button type="button" onclick="selectMood('🔥')">🔥</button>
+<button type="button" onclick="selectMood('😂')">😂</button>
+<button type="button" onclick="selectMood('😱')">😱</button>
+<button type="button" onclick="selectMood('🤩')">🤩</button>
+
+</div>
+
+<input type="hidden" id="emoji">
+<p id="selectedMood">No mood selected</p>
+
+
+<button onclick="submitReview()">
+Submit Review
+</button>
+
+
+
+<div id="result"></div>
+
+
+</div>
+
+
+
+<script>
+
+function submitReview(){
+    function selectMood(mood){
+
+    document.getElementById("emoji").value = mood;
+
+    document.getElementById("selectedMood").innerHTML =
+    "Selected Mood: " + mood;
+
+}
+
+let movie =
+document.getElementById("movie").value;
+
+
+let review =
+document.querySelector("textarea").value;
+
+
+let emoji =
+document.getElementById("emoji").value;
+
+
+
+document.getElementById("result").innerHTML =
+
+"<h3>Your Review</h3>"+
+"🎬 "+movie+
+"<br><br>"+
+emoji+
+"<br>"+
+review;
+
+}
+
+</script>
+
+
+</body>
+</html>

@@ -27,6 +27,8 @@
       <a href="Movies.html" class="nav-item"><span class="nav-icon">&#127916;</span>Movies</a>
       <a href="Review.html" class="nav-item"><span class="nav-icon">&#128221;</span>Review & Rating</a>
       <a href="settings.html" class="nav-item"><span class="nav-icon">&#9881;</span>Settings</a>
+      <a href="search.html" class="nav-item"><span class="nav-icon">&#128269;</span>search Movies</search></a>
+  
     </nav>
 
     <div class="sidebar-promo">
@@ -46,26 +48,35 @@
         <p>Here's what's happening with your movie community.</p>
       </div>
 
-      <div class="topbar-actions">
-        <div class="search-box">
-          <span class="search-icon">&#128270;</span>
-          <input type="text" placeholder="Search movies, users, reviews...">
-        </div>
-        <button class="icon-btn" aria-label="Notifications">
-          &#128276;<span class="badge">3</span>
-        </button>
+      <div style="background:#1a1f35; color:#94a3b8; padding:4px 12px; border-radius:20px; font-size:11px;">
+  📅 <span id="todayDate"></span>
+</div>
+        
+<button onclick="toggleWatch()" style="background:#1a1f35; border:1px solid #1e2340; color:#e2e8f0; padding:6px 12px; border-radius:20px; cursor:pointer; font-size:13px; position:relative;">
+  🔖 Watchlist
+  <div id="watchBox" style="display:none; position:absolute; top:120%; right:0; background:#111527; border:1px solid #1e2340; border-radius:12px; width:220px; z-index:999;">
+    <div style="padding:12px 14px; font-size:13px; font-weight:600; color:#4f8ef7; border-bottom:1px solid #1e2340;">🔖 My Watchlist</div>
+    <div style="padding:10px 14px; color:#e2e8f0; font-size:12px; border-bottom:1px solid #1e2340;">🎬 Interstellar</div>
+    <div style="padding:10px 14px; color:#e2e8f0; font-size:12px; border-bottom:1px solid #1e2340;">🎬 RRR</div>
+    <div style="padding:10px 14px; color:#e2e8f0; font-size:12px;">🎬 Avatar</div>
+  </div>
+</button>
+
+
+        <button id="themeBtn" onclick="toggleTheme()" style="background:#1a1f35; border:1px solid #1e2340; color:#e2e8f0; padding:6px 12px; border-radius:20px; cursor:pointer; font-size:13px;">
+  🌙 Dark
+</button>
+
         <div class="profile">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy606CYdQuQNTxOH0mHl6Lxdker4OH8Nvvg&s" alt="Admin Profile">
           <span>Admin</span>
           <span class="chev">▾</span>
-        </div>
-        <button class="btn-primary">+ Add Movie</button>
       </div>
     </header>
 
     <!-- stat cards -->
     <section class="stats-grid">
-      <div class="stat-card stat-purple">
+      <div class="stat-card stat-purple" onclick="location.href='TotalMovies.html'" style="cursor:pointer;">
         <div class="stat-icon">&#127916;</div>
         <div class="stat-info">
           <span class="stat-label">Total Movies</span>
@@ -73,7 +84,7 @@
           <span class="stat-delta up">↑ 12 this month</span>
         </div>
       </div>
-      <div class="stat-card stat-blue">
+      <div class="stat-card stat-blue" onclick="location.href='TotalReviews.html'" style="cursor:pointer;">
         <div class="stat-icon">&#11088;</div>
         <div class="stat-info">
           <span class="stat-label">Total Reviews</span>
@@ -81,7 +92,7 @@
           <span class="stat-delta up">↑ 35 this month</span>
         </div>
       </div>
-      <div class="stat-card stat-green">
+      <div class="stat-card stat-green" onclick="location.href='TotalUsers.html'" style="cursor:pointer;">
         <div class="stat-icon">&#128101;</div>
         <div class="stat-info">
           <span class="stat-label">Total Users</span>
@@ -93,8 +104,8 @@
         <div class="stat-icon">&#127942;</div>
         <div class="stat-info">
           <span class="stat-label">Average Rating</span>
-          <span class="stat-value">4.2</span>
-          <span class="stat-delta neutral">★ Great!</span>
+          <span class="stat-value">4.8</span>
+          <span class="stat-delta neutral">&#11088; Great!</span>
         </div>
       </div>
     </section>
@@ -109,11 +120,12 @@
         <div class="panel">
           <div class="panel-head">
             <h3><span class="title-icon">&#11088;</span> Top Rated Movies</h3>
-            <a href="#" class="view-all">View All</a>
+            <a href="Movies.html"
+             class="view-all">View All</a>
           </div>
           <div class="movie-row">
             <div class="movie-card">
-              <div class="poster poster-1"><span class="rating-chip">★ 4.5</span>
+              <div class="poster poster-1"><span class="rating-chip">&#11088; 4.5</span>
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ97v_59AKV3Ju0DqjzcNz3HX3FzkFYiBlN5keeXmNV9A&s=10">
               </div>
               <p class="movie-title">Jawan</p>
@@ -123,7 +135,7 @@
               </a>
             </div>
             <div class="movie-card">
-              <div class="poster poster-2"><span class="rating-chip">★ 4.7</span>
+              <div class="poster poster-2"><span class="rating-chip">&#11088; 4.7</span>
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5EVKzT7Q76aQO20t933sVRyMaKFlnNaSNqCfkl51YMw&s=10">
             </div>
               <p class="movie-title">RRR</p>
@@ -133,8 +145,8 @@
               </a>
             </div>
             <div class="movie-card">
-              <div class="poster poster-3"><span class="rating-chip">★ 4.6</span>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5JUrgWyFri6wC7neU__yPaQIJyWQ3wrQ3FFCXXVsP9A&s=10">
+              <div class="poster poster-3"><span class="rating-chip">&#11088; 4.6</span>
+              <img src="https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYTcyOTE3OTgwLWRlYzctMTFmMC05ZjdmLWQ5NWI0NWYwMWMxNi5qcGc=">
             </div>
               <p class="movie-title">Jana Nayagan</p>
               <p class="movie-meta">2026 · 183m</p>
@@ -144,8 +156,8 @@
               
             </div>
             <div class="movie-card">
-              <div class="poster poster-4"><span class="rating-chip">★ 4.6</span>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLUbgB4Uig256VPMAMvPGB5xGFropWj0jpADzUuD5xqE81AEHKLabe1w&s=10">
+              <div class="poster poster-4"><span class="rating-chip">&#11088; 4.6</span>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkGqyA0ANDg6xumnEK-ecD4REsd4-MERyMGgzOOQrFvA&s=10">
               </div>
               <p class="movie-title">Avatar: The Way Of Water</p>
               <p class="movie-meta">2022 · 192m</p>
@@ -155,7 +167,7 @@
               
             </div>
             <div class="movie-card">
-              <div class="poster poster-5"><span class="rating-chip">★ 4.8</span>
+              <div class="poster poster-5"><span class="rating-chip">&#11088; 4.8</span>
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuAaFoBHE4wG7f_lCVqR_P7U1gVxVySQmSrSY_YtF7BA&s=10">
               </div>
               <p class="movie-title">Interstellar</p>
@@ -172,9 +184,15 @@
         <div class="panel-pair">
           <div class="panel">
             <div class="panel-head">
-              <h3>Reviews Over Time</h3>
-              <select class="select-mini"><option>This Month</option></select>
-            </div>
+             <h3>Reviews Over Time</h3>
+
+             <select class="select-mini" onchange="changePeriod(this.value)">
+            <option value="month">This Month</option>
+            <option value="week">This Week</option>
+            <option value="year">This Year</option>
+            </select>
+
+</div>
             <svg viewBox="0 0 600 220" class="line-chart" preserveAspectRatio="none">
               <line x1="0" y1="20" x2="600" y2="20" class="grid-line"/>
               <line x1="0" y1="70" x2="600" y2="70" class="grid-line"/>
@@ -191,7 +209,8 @@
           <div class="panel">
             <div class="panel-head">
               <h3>Top Genres</h3>
-              <a href="#" class="view-all">View All</a>
+              <a href="genre-performance.html"
+              class="view-all">View All</a>
             </div>
             <ul class="genre-list">
               <li><span class="genre-dot dot-purple"></span>Action <div class="genre-bar"><div class="genre-fill" style="width:35%;background:#8b5cf6"></div></div><span class="genre-pct">45%</span></li>
@@ -207,7 +226,8 @@
 <div class="panel">
   <div class="panel-head">
     <h3><span class="title-icon">&#127916;</span> Recent Added Movies</h3>
-    <a href="#" class="view-all">View All</a>
+    <a href="Movies.html" 
+    class="view-all">View All</a>
   </div>
 
   <div class="movie-row">
@@ -313,7 +333,7 @@
                 <span class="review-time">5h ago</span>
               </div>
             <li>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgsGfvrVl9-MOepsnLGdvl0Og2ZpOFCQj-yBQjBOXikA&s=10" alt="">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUvmEe88kBgJGArwphQOPooeXU3nBm_ZnNNGasMA_4vw&s=10" alt="">
               <div class="review-info">
                 <span class="review-name">Ananya</span>
                 <span class="review-movie">(Jana Nayagan)</span>
@@ -347,22 +367,87 @@
             </li>
           </ul>
         </div>
+      
         <!-- quick actions -->
-        <div class="panel">
-          <div class="panel-head"><h3>Quick Actions</h3></div>
-          <div class="quick-grid">
-            <button class="quick-btn qb-purple"><span>&#10133;</span>Add Movie</button>
-            <button class="quick-btn qb-blue"><span>&#128101;</span>Manage Users</button>
-            <button class="quick-btn qb-green"><span>&#128200;</span>View Reports</button>
-            <button class="quick-btn qb-orange"><span>&#127991;</span>Categories</button>
-          </div>
-        </div>
-
-      </div>
+<div class="panel">
+  <div class="panel-head">
+    <h3>&#9889; Quick Actions</h3>
+  </div>
+  <div class="quick-grid" style="grid-template-columns:1fr 1fr;">
+    <button class="quick-btn qb-orange" 
+      onclick="location.href='TopReviewer.html'">
+      <span>&#127942;</span>Top Reviewer
+    </button>
+    <button class="quick-btn qb-purple" 
+      onclick="location.href='genre-performance.html'">
+      <span>&#127914;</span>Genre Performance
+    </button>
+    <button class="quick-btn qb-voilet" 
+      onclick="location.href='mood tracker.html'">
+      <span>&#127914;</span>Mood Tracker
+    </button>
+  </div>
+</div>
 
     </section>
   </main>
 </div>
+
+<script>
+document.getElementById('todayDate').innerText = new Date().toDateString();
+</script>
+
+
+<script>
+function toggleTheme() {
+  var btn = document.getElementById('themeBtn');
+  if (document.body.style.background == 'white') {
+    document.body.style.background = '#0d0f1a';
+    document.body.style.color = '#e2e8f0';
+    btn.innerText = '🌙 Dark';
+  } else {
+    document.body.style.background = 'white';
+    document.body.style.color = 'black';
+    btn.innerText = '☀️ Light';
+  }
+}
+</script>
+
+<script>
+function toggleWatch() {
+  var box = document.getElementById('watchBox');
+  box.style.display = box.style.display == 'none' ? 'block' : 'none';
+}
+</script>
+
+<script>
+var chartData = {
+  month: {
+    line: "0,170 80,150 160,140 240,110 320,120 400,80 480,90 560,30 600,20",
+    fill: "0,170 80,150 160,140 240,110 320,120 400,80 480,90 560,30 600,20 600,220 0,220",
+    labels: ["Week 1","Week 2","Week 3","Week 4"]
+  },
+  week: {
+    line: "0,180 100,160 200,145 300,130 400,140 500,100 600,70",
+    fill: "0,180 100,160 200,145 300,130 400,140 500,100 600,70 600,220 0,220",
+    labels: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+  },
+  year: {
+    line: "0,190 50,178 100,165 150,150 200,138 250,122 300,108 350,94 400,80 450,65 500,50 600,30",
+    fill: "0,190 50,178 100,165 150,150 200,138 250,122 300,108 350,94 400,80 450,65 500,50 600,30 600,220 0,220",
+    labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+  }
+};
+
+function changePeriod(period) {
+  var d = chartData[period];
+  document.querySelector('.chart-line').setAttribute('points', d.line);
+  document.querySelector('.chart-fill').setAttribute('points', d.fill);
+  var labelDiv = document.querySelector('.chart-labels');
+  labelDiv.innerHTML = d.labels.map(function(l){ return '<span>'+l+'</span>'; }).join('');
+}
+</script>
+
 
 </body>
 </html>

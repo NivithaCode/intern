@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Movies — MovieReview & Rating System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="TotalMovies.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-icon">🎬</span>
+      <div class="brand-text">
+        <span class="brand-name">Movie<span class="accent">Review</span></span>
+        <span class="brand-sub">&amp; Rating System</span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="Dashboard.html" class="nav-item">🏠 Dashboard</a>
+      <a href="Movies.html" class="nav-item">🎥 Movies</a>
+      <a href="Review.html" class="nav-item">📝 Review &amp; Rating</a>
+      <a href="settings.html" class="nav-item">⚙️ Settings</a>
+      <a href="TotalMovies.html" class="nav-item active">🎞️ Total Movies</a>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <a href="Dashboard.html" class="back-link">← Back to Dashboard</a>
+        <h1>Total Movies 🎞️</h1>
+        <p>Complete list of all movies in the system.</p>
+      </div>
+    </header>
+
+    <!-- Stat Banner -->
+    <div class="stat-banner">
+      <div class="stat-item">
+        <span class="stat-num" id="totalCount">248</span>
+        <span class="stat-label">Total Movies</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">12</span>
+        <span class="stat-label">Added This Month</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4</span>
+        <span class="stat-label">Languages</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4.8⭐</span>
+        <span class="stat-label">Avg Rating</span>
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-bar">
+      <button class="filter-btn active-filter" data-lang="all">🌐 All (248)</button>
+      <button class="filter-btn" data-lang="tamil">🎭 Tamil</button>
+      <button class="filter-btn" data-lang="malayalam">🌴 Malayalam</button>
+      <button class="filter-btn" data-lang="english">🌍 English</button>
+      <button class="filter-btn" data-lang="hindi">🎪 Hindi</button>
+    </div>
+
+    <!-- Movies Table -->
+    <div class="table-wrapper">
+      <table class="movies-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Movie</th>
+            <th>Language</th>
+            <th>Year</th>
+            <th>Genre</th>
+            <th>Duration</th>
+            <th>Rating</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="movieTable

@@ -1,0 +1,82 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d1f;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* ===== Chart Container ===== */
+.chart-container {
+  background-color: #12122b;
+  border-radius: 16px;
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 780px;
+  box-shadow: 0 8px 32px rgba(124, 131, 245, 0.12);
+  border: 1px solid rgba(124, 131, 245, 0.15);
+}
+
+/* ===== Header Row ===== */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chart-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Filter Buttons ===== */
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-btn {
+  background-color: transparent;
+  color: #a0a8ff;
+  border: 1.5px solid rgba(124, 131, 245, 0.35);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: rgba(124, 131, 245, 0.15);
+  border-color: #7c83f5;
+  color: #ffffff;
+}
+
+.filter-btn.active {
+  background-color: #3c55e8;
+  border-color: #3c55e8;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(60, 85, 232, 0.5);
+}
+
+/* ===== Chart Canvas Wrapper ===== */
+.chart-wrapper {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}

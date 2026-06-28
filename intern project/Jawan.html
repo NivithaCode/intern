@@ -1,31 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Jawan Details</title>
-<link rel="stylesheet" href="Dashboard-style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jawan – MovieReview</title>
+  <link rel="stylesheet" href="jawan-style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
 
-<div class="movie-details">
+  <!-- Back Button -->
+  <a href="Dashboard.html" class="back-btn">← Back to Dashboard</a>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdCXnmAh5akncRBaNPwoTNudqU3l2X1Qho644Z3xVscw&s=10" width="100">
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="movie-poster">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-CM9qh4jGWnXgHmKS1w_LfXrSpdO9Omn_77Z8LbC3A&s=10" alt="Jawan Poster"/>
+      </div>
+      <div class="movie-info">
+        <div class="badge">2023 · Action · Thriller</div>
+        <h1 class="movie-title">Jawan</h1>
+        <div class="meta-row">
+          <span>⏱ 169 min</span>
+          <span>🌐 Tamil</span>
+          <span>📅 7 Sep 2023</span>
+        </div>
+        <div class="rating-row">
+          <div class="big-rating">⭐ 4.5</div>
+          <div class="rating-count">1,248 reviews</div>
+        </div>
+        <p class="movie-desc">
+          A prison warden recruits inmates to commit six Robin Hood-style heists to expose the corrupt officials who ruined their lives, while he battles his own dark past. Directed by Atlee, starring Shah Rukh Khan.
+        </p>
+        <div class="action-btns">
+          <button class="btn-ghost">🔖 Watchlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h1>Jawan</h1>
+  <!-- Details Section -->
+  <div class="details-section">
 
-<p>Year: 2023</p>
-<p>Duration: 169 min</p>
-<p>Genre: Action, Thriller</p>
+    <!-- Cast -->
+    <div class="card">
+      <h3 class="card-title">🎭 Cast</h3>
+      <div class="cast-grid">
+        <div class="cast-item">
+          <div class="cast-avatar">S</div>
+          <span>Shah Rukh Khan</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar">N</div>
+          <span>Nayanthara</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar">V</div>
+          <span>Vijay Sethupathi</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar">D</div>
+          <span>Deepika Padukone</span>
+        </div>
+      </div>
+    </div>
 
-<h3>About Movie</h3>
-<p>
-A thrilling action movie with an emotional story.
-</p>
+    <!-- Ratings Breakdown -->
+    <div class="card">
+      <h3 class="card-title">⭐ Ratings Breakdown</h3>
+      <div class="rating-bars">
+        <div class="bar-row">
+          <span>5 ★</span>
+          <div class="bar-track"><div class="bar-fill" style="width:55%; background:#22c55e;"></div></div>
+          <span>55%</span>
+        </div>
+        <div class="bar-row">
+          <span>4 ★</span>
+          <div class="bar-track"><div class="bar-fill" style="width:25%; background:#4f8ef7;"></div></div>
+          <span>25%</span>
+        </div>
+        <div class="bar-row">
+          <span>3 ★</span>
+          <div class="bar-track"><div class="bar-fill" style="width:12%; background:#f59e0b;"></div></div>
+          <span>12%</span>
+        </div>
+        <div class="bar-row">
+          <span>2 ★</span>
+          <div class="bar-track"><div class="bar-fill" style="width:5%; background:#f97316;"></div></div>
+          <span>5%</span>
+        </div>
+        <div class="bar-row">
+          <span>1 ★</span>
+          <div class="bar-track"><div class="bar-fill" style="width:3%; background:#f43f5e;"></div></div>
+          <span>3%</span>
+        </div>
+      </div>
+    </div>
 
-<h3>Rating</h3>
-<p>⭐ 4.5 / 5</p>
+    <!-- Reviews — Add Review button இங்க மட்டும் -->
+    <div class="card full-width">
+      <div class="reviews-header">
+        <h3 class="card-title">💬 Recent Reviews</h3>
+        <button class="btn-primary" onclick="openModal()">+ Add Review</button>
+      </div>
+      <div class="reviews-list">
+        <div class="review-item">
+          <div class="review-avatar">K</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Karthik</strong>
+              <span class="stars">★★★★★</span>
+              <span class="time">2h ago</span>
+            </div>
+            <p>Absolutely loved it! SRK was phenomenal. The action sequences were top notch!</p>
+          </div>
+        </div>
+        <div class="review-item">
+          <div class="review-avatar">P</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Priya</strong>
+              <span class="stars">★★★★</span>
+              <span class="time">1d ago</span>
+            </div>
+            <p>Great movie overall. Vijay Sethupathi as the villain was outstanding!</p>
+          </div>
+        </div>
+        <div class="review-item">
+          <div class="review-avatar">R</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Rahul</strong>
+              <span class="stars">★★★★★</span>
+              <span class="time">2d ago</span>
+            </div>
+            <p>One of the best action films of 2023. Must watch for SRK fans!</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</div>
+  </div>
+
+  <!-- Modal -->
+  <div id="reviewModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999;">
+    <div style="background:#111527; border-radius:16px; padding:28px; width:400px; margin:100px auto;">
+      <h3 style="color:white; margin-bottom:20px;">Add Review</h3>
+      <p style="color:gray;">Name</p>
+      <input id="rName" type="text" style="width:100%; padding:10px; background:#0d0f1a; color:white; border:1px solid #333; border-radius:8px; margin-bottom:15px;"/>
+      <p style="color:gray;">Review</p>
+      <textarea id="rText" style="width:100%; padding:10px; background:#0d0f1a; color:white; border:1px solid #333; border-radius:8px; height:80px;"></textarea>
+      <br/><br/>
+      <button onclick="submitReview()" style="background:#4f8ef7; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">Submit</button>
+      <button onclick="closeModal()" style="background:gray; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-left:10px;">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('reviewModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('reviewModal').style.display = 'none';
+    }
+
+    function submitReview() {
+      var name = document.getElementById('rName').value;
+      var text = document.getElementById('rText').value;
+
+      if (name == '' || text == '') {
+        alert('Please fill all fields!');
+        return;
+      }
+
+      var newReview = '<div class="review-item"><div class="review-avatar">' + name[0].toUpperCase() + '</div><div class="review-body"><div class="review-top"><strong>' + name + '</strong><span class="time">Just now</span></div><p>' + text + '</p></div></div>';
+
+      document.querySelector('.reviews-list').innerHTML = newReview + document.querySelector('.reviews-list').innerHTML;
+
+      closeModal();
+      document.getElementById('rName').value = '';
+      document.getElementById('rText').value = '';
+    }
+  </script>
 
 </body>
 </html>

@@ -1,61 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Spider-Man: No Way Home Details</title>
-
-<link rel="stylesheet" href="Dashboard-style.css">
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spider-Man: No Way Home – MovieReview</title>
+  <link rel="stylesheet" href="spiderman-no-way-home.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
 
-<div class="movie-details">
+  <!-- Back Button -->
+  <a href="Dashboard.html" class="back-btn">← Back to Dashboard</a>
 
-    <img src="SPIDERMAN_NO_WAY_HOME_IMAGE_LINK" alt="Spider-Man No Way Home Poster">
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
 
-    <h1>Spider-Man: No Way Home</h1>
+      <div class="movie-poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_official_poster.jpg" alt="Spider-Man No Way Home Poster"
+          onerror="this.style.background='#1e2336'; this.src='';"/>
+      </div>
 
-    <p>⭐ Rating: 4.9 / 5</p>
+      <div class="movie-info">
+        <div class="badge">2021 · Action · Sci-Fi · Adventure</div>
+        <h1 class="movie-title">Spider-Man: No Way Home</h1>
+        <div class="meta-row">
+          <span>⏱ 148 min</span>
+          <span>🌐 English</span>
+          <span>📅 2021</span>
+          <span>🎬 Marvel / Sony</span>
+        </div>
+        <div class="rating-row">
+          <div class="big-rating">⭐ 4.8</div>
+          <div class="rating-count" id="review-count">3,847 reviews</div>
+        </div>
+        <p class="movie-desc">
+          With Spider-Man's identity revealed, Peter Parker asks Doctor Strange to make the world forget.
+          But when the spell goes wrong, dangerous villains from other universes start to appear.
+          Directed by Jon Watts — the ultimate multiverse fan celebration of all time.
+        </p>
+        <div class="action-btns">
+          <button class="btn-ghost">🔖 Watchlist</button>
+        </div>
+      </div>
 
-    <p>Year: 2021</p>
+    </div>
+  </div>
 
-    <p>Duration: 148 minutes</p>
+  <!-- Details Section -->
+  <div class="details-section">
 
-    <p>Genre: Action, Adventure, Sci-Fi</p>
+    <!-- Cast -->
+    <div class="card">
+      <h3 class="card-title">🎭 Cast</h3>
+      <div class="cast-grid">
+        <div class="cast-item">
+          <div class="cast-avatar av-t">T</div>
+          <span>Tom Holland</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-z">Z</div>
+          <span>Zendaya</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-b">B</div>
+          <span>Benedict Cumberbatch</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-j">J</div>
+          <span>Jamie Foxx</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-w">W</div>
+          <span>Willem Dafoe</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-a">A</div>
+          <span>Alfred Molina</span>
+        </div>
+      </div>
+    </div>
 
+    <!-- Ratings Breakdown -->
+    <div class="card">
+      <h3 class="card-title">⭐ Ratings Breakdown</h3>
+      <div class="rating-bars">
+        <div class="bar-row">
+          <span>5 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:72%; background:#22c55e;"></div>
+          </div>
+          <span>72%</span>
+        </div>
+        <div class="bar-row">
+          <span>4 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:18%; background:#4f8ef7;"></div>
+          </div>
+          <span>18%</span>
+        </div>
+        <div class="bar-row">
+          <span>3 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:6%; background:#f59e0b;"></div>
+          </div>
+          <span>6%</span>
+        </div>
+        <div class="bar-row">
+          <span>2 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:2%; background:#f97316;"></div>
+          </div>
+          <span>2%</span>
+        </div>
+        <div class="bar-row">
+          <span>1 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:2%; background:#f43f5e;"></div>
+          </div>
+          <span>2%</span>
+        </div>
+      </div>
+    </div>
 
-    <h3>Director</h3>
-    <p>Jon Watts</p>
+    <!-- Villains Spotlight -->
+    <div class="card">
+      <h3 class="card-title">🦹 Villains Spotlight</h3>
+      <div class="villain-list">
+        <div class="villain-item">
+          <div class="villain-avatar av-g">G</div>
+          <div class="villain-info">
+            <strong>Green Goblin</strong>
+            <span>Willem Dafoe</span>
+          </div>
+          <div class="villain-badge">🔥 Fan Fav</div>
+        </div>
+        <div class="villain-item">
+          <div class="villain-avatar av-doc">D</div>
+          <div class="villain-info">
+            <strong>Doc Ock</strong>
+            <span>Alfred Molina</span>
+          </div>
+          <div class="villain-badge">⚡ Iconic</div>
+        </div>
+        <div class="villain-item">
+          <div class="villain-avatar av-elec">E</div>
+          <div class="villain-info">
+            <strong>Electro</strong>
+            <span>Jamie Foxx</span>
+          </div>
+          <div class="villain-badge">✨ Upgraded</div>
+        </div>
+        <div class="villain-item">
+          <div class="villain-avatar av-sand">S</div>
+          <div class="villain-info">
+            <strong>Sandman</strong>
+            <span>Thomas Haden Church</span>
+          </div>
+          <div class="villain-badge">🏖️ Classic</div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Recent Reviews -->
+    <div class="card full-width">
+      <div class="reviews-header">
+        <h3 class="card-title">💬 Recent Reviews</h3>
+        <button class="btn-primary" onclick="openModal()">+ Add Review</button>
+      </div>
 
-    <h3>Cast</h3>
-    <p>
-    Tom Holland<br>
-    Zendaya<br>
-    Benedict Cumberbatch<br>
-    Tobey Maguire<br>
-    Andrew Garfield
-    </p>
+      <div class="reviews-list" id="reviews-list">
 
+        <div class="review-item">
+          <div class="review-avatar av-t">T</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Thiru</strong>
+              <span class="stars">★★★★★</span>
+              <span class="time">2h ago</span>
+            </div>
+            <p>Theatre la paatha goosebumps scene! When the three Spider-Men appeared together the whole crowd went crazy. Never felt that energy in a theatre before. GOAT movie!</p>
+          </div>
+        </div>
 
-    <h3>About Movie</h3>
-    <p>
-    Peter Parker's identity is revealed, and he seeks help
-    from Doctor Strange. But the spell goes wrong, bringing
-    villains and heroes from different universes together.
-    </p>
+        <div class="review-item">
+          <div class="review-avatar av-n">N</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Nithya</strong>
+              <span class="stars">★★★★★</span>
+              <span class="time">5h ago</span>
+            </div>
+            <p>Willem Dafoe as Green Goblin was absolutely terrifying and brilliant. The emotional ending hit me so hard. Cried like a baby ngl 😭</p>
+          </div>
+        </div>
 
+        <div class="review-item">
+          <div class="review-avatar av-k">K</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Kiran</strong>
+              <span class="stars">★★★★★</span>
+              <span class="time">1d ago</span>
+            </div>
+            <p>The best superhero movie ever made for fans. 20 years of Spider-Man history packed into one film. Tobey and Andrew's return was the moment of the decade!</p>
+          </div>
+        </div>
 
-    <h3>User Reviews</h3>
+      </div>
+    </div>
 
-    <p>★★★★★ Multiverse experience was amazing!</p>
-    <p>★★★★★ Best Spider-Man movie ever!</p>
+  </div>
 
+  <!-- Modal -->
+  <div id="reviewModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999;">
+    <div style="background:#111527; border-radius:16px; padding:28px; width:400px; margin:100px auto;">
+      <h3 style="color:white; margin-bottom:20px;">Add Review</h3>
 
-</div>
+      <p style="color:gray; margin-bottom:6px;">Name</p>
+      <input id="rName" type="text" placeholder="Your name..."
+        style="width:100%; padding:10px; background:#0d0f1a; color:white; border:1px solid #333; border-radius:8px; margin-bottom:15px;"/>
+
+      <p style="color:gray; margin-bottom:6px;">Review</p>
+      <textarea id="rText" placeholder="Share your thoughts about Spider-Man: No Way Home..."
+        style="width:100%; padding:10px; background:#0d0f1a; color:white; border:1px solid #333; border-radius:8px; height:80px;"></textarea>
+
+      <br/><br/>
+      <button onclick="submitReview()"
+        style="background:#e63946; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">
+        Submit
+      </button>
+      <button onclick="closeModal()"
+        style="background:gray; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-left:10px;">
+        Cancel
+      </button>
+    </div>
+  </div>
+
+  <script>
+    var totalReviews = 3847;
+
+    function openModal() {
+      document.getElementById('reviewModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('reviewModal').style.display = 'none';
+    }
+
+    function submitReview() {
+      var name = document.getElementById('rName').value;
+      var text = document.getElementById('rText').value;
+
+      if (name == '' || text == '') {
+        alert('Please fill all fields!');
+        return;
+      }
+
+      var initial = name[0].toUpperCase();
+
+      var newReview =
+        '<div class="review-item">' +
+          '<div class="review-avatar">' + initial + '</div>' +
+          '<div class="review-body">' +
+            '<div class="review-top">' +
+              '<strong>' + name + '</strong>' +
+              '<span class="time">Just now</span>' +
+            '</div>' +
+            '<p>' + text + '</p>' +
+          '</div>' +
+        '</div>';
+
+      var list = document.getElementById('reviews-list');
+      list.innerHTML = newReview + list.innerHTML;
+
+      totalReviews++;
+      document.getElementById('review-count').textContent = totalReviews.toLocaleString() + ' reviews';
+
+      closeModal();
+      document.getElementById('rName').value = '';
+      document.getElementById('rText').value = '';
+    }
+  </script>
 
 </body>
 </html>

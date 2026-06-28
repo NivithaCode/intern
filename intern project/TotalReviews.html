@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Reviews — MovieReview & Rating System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="TotalReviews.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-icon">🎬</span>
+      <div class="brand-text">
+        <span class="brand-name">Movie<span class="accent">Review</span></span>
+        <span class="brand-sub">&amp; Rating System</span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="Dashboard.html" class="nav-item">🏠 Dashboard</a>
+      <a href="Movies.html" class="nav-item">🎥 Movies</a>
+      <a href="Review.html" class="nav-item">📝 Review &amp; Rating</a>
+      <a href="settings.html" class="nav-item">⚙️ Settings</a>
+      <a href="TotalReviews.html" class="nav-item active">⭐ Total Reviews</a>
+    </nav>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <a href="Dashboard.html" class="back-link">← Back to Dashboard</a>
+        <h1>Total Reviews ⭐</h1>
+        <p>All user reviews across every movie.</p>
+      </div>
+      <div class="topbar-right">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="searchInput" placeholder="Search reviews...">
+        </div>
+        <select id="starFilter" class="star-select">
+          <option value="all">All Stars</option>
+          <option value="5">★★★★★ 5 Stars</option>
+          <option value="4">★★★★☆ 4 Stars</option>
+          <option value="3">★★★☆☆ 3 Stars</option>
+          <option value="2">★★☆☆☆ 2 Stars</option>
+          <option value="1">★☆☆☆☆ 1 Star</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Stat Banner -->
+    <div class="stat-banner">
+      <div class="stat-item">
+        <span class="stat-num" id="totalCount">1,325</span>
+        <span class="stat-label">Total Reviews</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">35</span>
+        <span class="stat-label">Added This Month</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">4.2 ⭐</span>
+        <span class="stat-label">Average Rating</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">45%</span>
+        <span class="stat-label">5 Star Reviews</span>
+      </div>
+    </div>
+
+    <!-- Rating Summary Bar -->
+    <div class="rating-summary">
+      <h3>Ratings Breakdown</h3>
+      <div class="bar-row">
+        <span>★★★★★</span>
+        <div class="bar-track"><div class="bar-fill" style="width:45%; background:#4ade80;"></div></div>
+        <span>45%</span>
+      </div>
+      <div class="bar-row">
+        <span>★★★★☆</span>
+        <div class="bar-track"><div class="bar-fill" style="width:30%; background:#4f8ef7;"></div></div>
+        <span>30%</span>
+      </div>
+      <div class="bar-row">
+        <span>★★★☆☆</span>
+        <div class="bar-track"><div class="bar-fill" style="width:15%; background:#a78bfa;"></div></div>
+        <span>15%</span>
+      </div>
+      <div class="bar-row">
+        <span>★★☆☆☆</span>
+        <div class="bar-track"><div class="bar-fill" style="width:6%; background:#fb923c;"></div></div>
+        <span>6%</span>
+      </div>
+      <div class="bar-row">
+        <span>★☆☆☆☆</span>
+        <div class="bar-track"><div class="bar-fill" style="width:4%; background:#f87171;"></div></div>
+        <span>4%</span>
+      </div>
+    </div>
+
+    <!-- Reviews Table -->
+    <div class="table-wrapper">
+      <table class="reviews-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>User</th>
+            <th>Movie</th>
+            <th>Rating</th>
+            <th>Review</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="reviewTableBody">
+
+          <tr data-stars="5">
+            <td>1</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#4f8ef7;">K</div>
+              <span>Karthik</span>
+            </td>
+            <td class="movie-cell">🎬 Jawan</td>
+            <td class="stars-cell">★★★★★</td>
+            <td class="review-text">Absolutely amazing! SRK at his best. Full mass entertainer.</td>
+            <td class="date-cell">2h ago</td>
+          </tr>
+
+          <tr data-stars="3">
+            <td>2</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#f59e0b;">N</div>
+              <span>Neha</span>
+            </td>
+            <td class="movie-cell">🎬 RRR</td>
+            <td class="stars-cell">★★★☆☆</td>
+            <td class="review-text">Good visuals but story was a bit slow in the middle.</td>
+            <td class="date-cell">5h ago</td>
+          </tr>
+
+          <tr data-stars="4">
+            <td>3</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#a855f7;">A</div>
+              <span>Ananya</span>
+            </td>
+            <td class="movie-cell">🎬 Jana Nayagan</td>
+            <td class="stars-cell">★★★★☆</td>
+            <td class="review-text">Thalapathy's farewell was emotional and grand. Loved it!</td>
+            <td class="date-cell">1d ago</td>
+          </tr>
+
+          <tr data-stars="4">
+            <td>4</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#10b981;">R</div>
+              <span>Rahul</span>
+            </td>
+            <td class="movie-cell">🎬 Avatar: The Way of Water</td>
+            <td class="stars-cell">★★★★☆</td>
+            <td class="review-text">Stunning underwater visuals. James Cameron did it again!</td>
+            <td class="date-cell">2d ago</td>
+          </tr>
+
+          <tr data-stars="5">
+            <td>5</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#ef4444;">S</div>
+              <span>Sanjay</span>
+            </td>
+            <td class="movie-cell">🎬 Interstellar</td>
+            <td class="stars-cell">★★★★★</td>
+            <td class="review-text">Mind blowing science fiction. Best movie I have ever watched!</td>
+            <td class="date-cell">3d ago</td>
+          </tr>
+
+          <tr data-stars="5">
+            <td>6</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#4f8ef7;">P</div>
+              <span>Priya</span>
+            </td>
+            <td class="movie-cell">🎬 Premalu</td>
+            <td class="stars-cell">★★★★★</td>
+            <td class="review-text">Super cute romance! Naslen and Mamitha were perfect together.</td>
+            <td class="date-cell">4d ago</td>
+          </tr>
+
+          <tr data-stars="5">
+            <td>7</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#f59e0b;">V</div>
+              <span>Vijay</span>
+            </td>
+            <td class="movie-cell">🎬 Spider-Man: No Way Home</td>
+            <td class="stars-cell">★★★★★</td>
+            <td class="review-text">The multiverse concept was brilliant. Fans will go crazy!</td>
+            <td class="date-cell">5d ago</td>
+          </tr>
+
+          <tr data-stars="4">
+            <td>8</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#10b981;">M</div>
+              <span>Meera</span>
+            </td>
+            <td class="movie-cell">🎬 Vaazha 2</td>
+            <td class="stars-cell">★★★★☆</td>
+            <td class="review-text">Emotional and funny at the same time. Malayalam cinema rocks!</td>
+            <td class="date-cell">6d ago</td>
+          </tr>
+
+          <tr data-stars="4">
+            <td>9</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#a855f7;">D</div>
+              <span>Divya</span>
+            </td>
+            <td class="movie-cell">🎬 Family Business</td>
+            <td class="stars-cell">★★★★☆</td>
+            <td class="review-text">Very funny comedy. Whole family enjoyed watching together.</td>
+            <td class="date-cell">1w ago</td>
+          </tr>
+
+          <tr data-stars="5">
+            <td>10</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#ef4444;">A</div>
+              <span>Arun</span>
+            </td>
+            <td class="movie-cell">🎬 RRR</td>
+            <td class="stars-cell">★★★★★</td>
+            <td class="review-text">Ram Charan and NTR Jr were outstanding. Epic performance!</td>
+            <td class="date-cell">1w ago</td>
+          </tr>
+
+          <tr data-stars="2">
+            <td>11</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#64748b;">R</div>
+              <span>Ravi</span>
+            </td>
+            <td class="movie-cell">🎬 LIK</td>
+            <td class="stars-cell">★★☆☆☆</td>
+            <td class="review-text">Story was weak. Expected much more from this movie.</td>
+            <td class="date-cell">2w ago</td>
+          </tr>
+
+          <tr data-stars="5">
+            <td>12</td>
+            <td class="user-cell">
+              <div class="user-avatar" style="background:#4f8ef7;">S</div>
+              <span>Swetha</span>
+            </td>
+            <td class="movie-cell">🎬 Interstellar</td>
+            <td class="stars-cell">★★★★★</td>
+            <td class="review-text">Watched 3 times already. Every time feels like first time!</td>
+            <td class="date-cell">2w ago</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- No results -->
+    <div class="no-results" id="noResults" style="display:none;">
+      <span>😕</span>
+      <p>No reviews found. Try a different search!</p>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  document.getElementById('searchInput').addEventListener('input', function () {
+    filterReviews();
+  });
+
+  document.getElementById('starFilter').addEventListener('change', function () {
+    filterReviews();
+  });
+
+  function filterReviews() {
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    const stars = document.getElementById('starFilter').value;
+    const rows = document.querySelectorAll('#reviewTableBody tr');
+    let visible = 0;
+
+    rows.forEach(row => {
+      const user = row.querySelector('.user-cell span')?.textContent.toLowerCase() || '';
+      const movie = row.querySelector('.movie-cell')?.textContent.toLowerCase() || '';
+      const review = row.querySelector('.review-text')?.textContent.toLowerCase() || '';
+      const rowStars = row.dataset.stars;
+
+      const matchSearch = user.includes(search) || movie.includes(search) || review.includes(search);
+      const matchStars = stars === 'all' || rowStars === stars;
+
+      if (matchSearch && matchStars) {
+        row.style.display = '';
+        visible++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('totalCount').textContent = visible;
+    document.getElementById('noResults').style.display = visible === 0 ? 'flex' : 'none';
+  }
+</script>
+
+</body>
+</html>

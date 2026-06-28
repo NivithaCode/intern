@@ -1,59 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Like (2023) Details</title>
-
-<link rel="stylesheet" href="Dashboard-style.css">
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LIK: Love Insurance Kompany – MovieReview</title>
+  <link rel="stylesheet" href="lik.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
 
-<div class="movie-details">
+  <!-- Back Button -->
+  <a href="Dashboard.html" class="back-btn">← Back to Dashboard</a>
 
-    <img src="LIKE_MOVIE_IMAGE_LINK" alt="Like Movie Poster">
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
 
-    <h1>Like</h1>
+      <div class="movie-poster">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Love_Insurance_Kompany_film_poster.jpg/220px-Love_Insurance_Kompany_film_poster.jpg" alt="LIK Poster"
+          onerror="this.style.background='#1e2336'; this.src=''; this.alt='LIK';"/>
+      </div>
 
-    <p>⭐ Rating: 4.2 / 5</p>
+      <div class="movie-info">
+        <div class="badge">2026 · Sci-Fi · Romance · Comedy</div>
+        <h1 class="movie-title">LIK: Love Insurance Kompany</h1>
+        <div class="meta-row">
+          <span>⏱ 150 min</span>
+          <span>🌐 Tamil</span>
+          <span>📅 2026</span>
+          <span>🎵 Anirudh</span>
+        </div>
+        <div class="rating-row">
+          <div class="big-rating">⭐4</div>
+          <div class="rating-count" id="review-count">743 reviews</div>
+        </div>
+        <p class="movie-desc">
+          Set in a futuristic 2040 where people fall in love through a dating app named LIK,
+          a man who believes in natural love falls for a woman who trusts the app —
+          leading him to challenge the system. Directed by Vignesh Shivan with music by Anirudh Ravichander.
+        </p>
+        <div class="action-btns">
+          <button class="btn-ghost">🔖 Watchlist</button>
+        </div>
+      </div>
 
-    <p>Year: 2023</p>
+    </div>
+  </div>
 
-    <p>Duration: 135 minutes</p>
+  <!-- Details Section -->
+  <div class="details-section">
 
-    <p>Genre: Drama, Romance, Social</p>
+    <!-- Cast -->
+    <div class="card">
+      <h3 class="card-title">🎭 Cast</h3>
+      <div class="cast-grid">
+        <div class="cast-item">
+          <div class="cast-avatar av-p">P</div>
+          <span>Pradeep Ranganathan</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-k">K</div>
+          <span>Krithi Shetty</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-s">S</div>
+          <span>S.J. Suryah</span>
+        </div>
+        <div class="cast-item">
+          <div class="cast-avatar av-y">Y</div>
+          <span>Yogi Babu</span>
+        </div>
+      </div>
+    </div>
 
+    <!-- Ratings Breakdown -->
+    <div class="card">
+      <h3 class="card-title">⭐ Ratings Breakdown</h3>
+      <div class="rating-bars">
+        <div class="bar-row">
+          <span>5 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:30%; background:#22c55e;"></div>
+          </div>
+          <span>30%</span>
+        </div>
+        <div class="bar-row">
+          <span>4 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:28%; background:#4f8ef7;"></div>
+          </div>
+          <span>28%</span>
+        </div>
+        <div class="bar-row">
+          <span>3 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:22%; background:#f59e0b;"></div>
+          </div>
+          <span>22%</span>
+        </div>
+        <div class="bar-row">
+          <span>2 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:12%; background:#f97316;"></div>
+          </div>
+          <span>12%</span>
+        </div>
+        <div class="bar-row">
+          <span>1 ★</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:8%; background:#f43f5e;"></div>
+          </div>
+          <span>8%</span>
+        </div>
+      </div>
+    </div>
 
-    <h3>Director</h3>
-    <p>Not Available</p>
+    <!-- Crew Info -->
+    <div class="card">
+      <h3 class="card-title">🎬 Crew</h3>
+      <div class="crew-list">
+        <div class="crew-row">
+          <span class="crew-label">Director</span>
+          <span class="crew-value">Vignesh Shivan</span>
+        </div>
+        <div class="crew-row">
+          <span class="crew-label">Music</span>
+          <span class="crew-value">Anirudh Ravichander</span>
+        </div>
+        <div class="crew-row">
+          <span class="crew-label">Cinematography</span>
+          <span class="crew-value">Ravi Varman</span>
+        </div>
+        <div class="crew-row">
+          <span class="crew-label">Editing</span>
+          <span class="crew-value">Pradeep E. Ragav</span>
+        </div>
+        <div class="crew-row">
+          <span class="crew-label">Producer</span>
+          <span class="crew-value">Nayanthara & Lalit Kumar</span>
+        </div>
+        <div class="crew-row">
+          <span class="crew-label">Production</span>
+          <span class="crew-value">Rowdy Pictures & Seven Screen Studio</span>
+        </div>
+      </div>
+    </div>
 
+    <!-- Recent Reviews -->
+    <div class="card full-width">
+      <div class="reviews-header">
+        <h3 class="card-title">💬 Recent Reviews</h3>
+        <button class="btn-primary" onclick="openModal()">+ Add Review</button>
+      </div>
 
-    <h3>Cast</h3>
-    <p>
-    Lead Actor 1<br>
-    Lead Actor 2<br>
-    Supporting Cast
-    </p>
+      <div class="reviews-list" id="reviews-list">
 
+        <div class="review-item">
+          <div class="review-avatar av-r">R</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Rahul</strong>
+              <span class="stars">★★★★★</span>
+              <span class="time">1h ago</span>
+            </div>
+            <p>Pradeep Ranganathan nailed it again! The 2040 futuristic setting was so creative. Anirudh's songs are already stuck in my head. Mass padam!</p>
+          </div>
+        </div>
 
-    <h3>About Movie</h3>
-    <p>
-    Like is a emotional drama film that explores relationships,
-    social media influence, and how “likes” affect human emotions
-    and real-life connections.
-    </p>
+        <div class="review-item">
+          <div class="review-avatar av-d">D</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Deepika</strong>
+              <span class="stars">★★★★</span>
+              <span class="time">4h ago</span>
+            </div>
+            <p>Krithi Shetty and Pradeep's chemistry was super cute! The concept of love through an app in 2040 is very original for Tamil cinema. Vignesh Shivan did well.</p>
+          </div>
+        </div>
 
+        <div class="review-item">
+          <div class="review-avatar av-m">M</div>
+          <div class="review-body">
+            <div class="review-top">
+              <strong>Manoj</strong>
+              <span class="stars">★★★</span>
+              <span class="time">1d ago</span>
+            </div>
+            <p>First half was breezy and fun. Second half dragged a bit. But SJ Suryah's comedy was the highlight of the whole film! One time watch.</p>
+          </div>
+        </div>
 
-    <h3>User Reviews</h3>
+      </div>
+    </div>
 
-    <p>★★★★★ Very emotional and relatable story.</p>
-    <p>★★★★ Good message about modern life.</p>
+  </div>
 
+  <!-- Modal -->
+  <div id="reviewModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999;">
+    <div style="background:#111527; border-radius:16px; padding:28px; width:400px; margin:100px auto;">
+      <h3 style="color:white; margin-bottom:20px;">Add Review</h3>
 
-</div>
+      <p style="color:gray; margin-bottom:6px;">Name</p>
+      <input id="rName" type="text" placeholder="Your name..."
+        style="width:100%; padding:10px; background:#0d0f1a; color:white; border:1px solid #333; border-radius:8px; margin-bottom:15px;"/>
+
+      <p style="color:gray; margin-bottom:6px;">Review</p>
+      <textarea id="rText" placeholder="Share your thoughts about LIK: Love Insurance Kompany..."
+        style="width:100%; padding:10px; background:#0d0f1a; color:white; border:1px solid #333; border-radius:8px; height:80px;"></textarea>
+
+      <br/><br/>
+      <button onclick="submitReview()"
+        style="background:#4f8ef7; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer;">
+        Submit
+      </button>
+      <button onclick="closeModal()"
+        style="background:gray; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-left:10px;">
+        Cancel
+      </button>
+    </div>
+  </div>
+
+  <script>
+    var totalReviews = 743;
+
+    function openModal() {
+      document.getElementById('reviewModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('reviewModal').style.display = 'none';
+    }
+
+    function submitReview() {
+      var name = document.getElementById('rName').value;
+      var text = document.getElementById('rText').value;
+
+      if (name == '' || text == '') {
+        alert('Please fill all fields!');
+        return;
+      }
+
+      var initial = name[0].toUpperCase();
+
+      var newReview =
+        '<div class="review-item">' +
+          '<div class="review-avatar">' + initial + '</div>' +
+          '<div class="review-body">' +
+            '<div class="review-top">' +
+              '<strong>' + name + '</strong>' +
+              '<span class="time">Just now</span>' +
+            '</div>' +
+            '<p>' + text + '</p>' +
+          '</div>' +
+        '</div>';
+
+      var list = document.getElementById('reviews-list');
+      list.innerHTML = newReview + list.innerHTML;
+
+      totalReviews++;
+      document.getElementById('review-count').textContent = totalReviews.toLocaleString() + ' reviews';
+
+      closeModal();
+      document.getElementById('rName').value = '';
+      document.getElementById('rText').value = '';
+    }
+  </script>
 
 </body>
 </html>

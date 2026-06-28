@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Reviewer — MovieReview & Rating System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Top Reviewer.css">
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="brand">
+    <span class="brand-icon">&#127916;</span>
+    <div class="brand-text">
+      <span class="brand-name">Movie<span class="accent">Review</span></span>
+      <span class="brand-sub">&amp; Rating System</span>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="Dashboard.html" class="nav-item"><span class="nav-icon">&#127968;</span>Dashboard</a>
+    <a href="Movies.html" class="nav-item"><span class="nav-icon">&#127916;</span>Movies</a>
+    <a href="Review.html" class="nav-item active"><span class="nav-icon">&#128221;</span>Review &amp; Rating</a>
+    <a href="settings.html" class="nav-item"><span class="nav-icon">&#9881;</span>Settings</a>
+    <a href="search.html" class="nav-item"><span class="nav-icon">&#128269;</span>Search Movies</a>
+  </nav>
+  <div class="sidebar-promo">
+    <span class="promo-icon">&#127871;&#127846;</span>
+    <h4>Welcome back!</h4>
+    <p>Explore movies, read reviews and share your thoughts.</p>
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <button class="back-btn" onclick="history.back()">&#8592; Back</button>
+    <div class="topbar-text">
+      <h1>&#127942; Top Reviewer</h1>
+      <p>This month's most active reviewers in our community.</p>
+    </div>
+  </header>
+
+  <!-- Podium Top 3 -->
+  <div class="podium-section">
+
+    <!-- 2nd Place -->
+    <div class="podium-card silver">
+      <div class="podium-rank">&#129352;</div>
+      <img src="https://www.shutterstock.com/image-vector/girl-happy-mode-emoji-style-260nw-2483001823.jpg" alt="Neha">
+      <div class="podium-name">Neha</div>
+      <div class="podium-reviews">18 Reviews</div>
+      <div class="podium-stars">&#11088; 4.1 avg</div>
+      <div class="podium-block silver-block">2nd</div>
+    </div>
+
+    <!-- 1st Place -->
+    <div class="podium-card gold">
+      <div class="podium-crown">&#128081;</div>
+      <div class="podium-rank">&#129351;</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy606CYdQuQNTxOH0mHl6Lxdker4OH8Nvvg&s" alt="Sanjay">
+      <div class="podium-name">Sanjay</div>
+      <div class="podium-reviews">26 Reviews</div>
+      <div class="podium-stars">&#11088; 4.8 avg</div>
+      <div class="podium-block gold-block">1st</div>
+    </div>
+
+    <!-- 3rd Place -->
+    <div class="podium-card bronze">
+      <div class="podium-rank">&#129353;</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUvmEe88kBgJGArwphQOPooeXU3nBm_ZnNNGasMA_4vw&s=10" alt="Ananya">
+      <div class="podium-name">Ananya</div>
+      <div class="podium-reviews">14 Reviews</div>
+      <div class="podium-stars">&#11088; 4.3 avg</div>
+      <div class="podium-block bronze-block">3rd</div>
+    </div>
+
+  </div>
+
+  <!-- Leaderboard List -->
+  <div class="panel">
+    <div class="panel-head">
+      <h3>&#128203; Full Leaderboard</h3>
+      <span class="badge">This Month</span>
+    </div>
+
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Reviewer</th>
+          <th>Reviews</th>
+          <th>Avg Rating</th>
+          <th>Badge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="top-row">
+          <td><span class="rank-num gold-text">&#127942; 1</span></td>
+          <td>
+            <div class="reviewer-cell">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy606CYdQuQNTxOH0mHl6Lxdker4OH8Nvvg&s" alt="">
+              <span>Sanjay</span>
+            </div>
+          </td>
+          <td><span class="review-count">26</span></td>
+          <td><span class="stars-small">&#11088; 4.8</span></td>
+          <td><span class="badge-chip gold-badge">&#128081; Legend</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank-num silver-text">&#129352; 2</span></td>
+          <td>
+            <div class="reviewer-cell">
+              <img src="https://www.shutterstock.com/image-vector/girl-happy-mode-emoji-style-260nw-2483001823.jpg" alt="">
+              <span>Neha</span>
+            </div>
+          </td>
+          <td><span class="review-count">18</span></td>
+          <td><span class="stars-small">&#11088; 4.1</span></td>
+          <td><span class="badge-chip silver-badge">&#11088; Expert</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank-num bronze-text">&#129353; 3</span></td>
+          <td>
+            <div class="reviewer-cell">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUvmEe88kBgJGArwphQOPooeXU3nBm_ZnNNGasMA_4vw&s=10" alt="">
+              <span>Ananya</span>
+            </div>
+          </td>
+          <td><span class="review-count">14</span></td>
+          <td><span class="stars-small">&#11088; 4.3</span></td>
+          <td><span class="badge-chip bronze-badge">&#128293; Rising</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank-num">4</span></td>
+          <td>
+            <div class="reviewer-cell">
+              <img src="https://www.shutterstock.com/image-vector/boy-happy-mode-emoji-style-260nw-2483002039.jpg" alt="">
+              <span>Karthik</span>
+            </div>
+          </td>
+          <td><span class="review-count">11</span></td>
+          <td><span class="stars-small">&#11088; 4.0</span></td>
+          <td><span class="badge-chip normal-badge">&#128064; Active</span></td>
+        </tr>
+        <tr>
+          <td><span class="rank-num">5</span></td>
+          <td>
+            <div class="reviewer-cell">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFBvFXDS621VuM7U-6vxYGJpzcPf-k0VgjdEns37PHWw&s=10" alt="">
+              <span>Rahul</span>
+            </div>
+          </td>
+          <td><span class="review-count">8</span></td>
+          <td><span class="stars-small">&#11088; 3.9</span></td>
+          <td><span class="badge-chip normal-badge">&#128064; Active</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+</body>
+</html>
