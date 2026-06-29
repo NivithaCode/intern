@@ -3,109 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Movie Review</title>
-
 <link rel="stylesheet" href="mood-tracker.css">
-
 </head>
-
 <body>
 
+<div class="card">
 
-<div class="review-card">
+  <div class="card-header">
+    <p class="eyebrow">🎬 Rate it</p>
+    <h1>Your <span>Movie Review</span></h1>
+  </div>
 
+  <div class="field">
+    <label>Movie</label>
+    <select id="movie">
+      <option>Interstellar</option>
+      <option>RRR</option>
+      <option>Jawan</option>
+    </select>
+  </div>
 
-<h2>🎬 Movie Review</h2>
+  <div class="field">
+    <label>Your Review</label>
+    <textarea id="review" placeholder="What did you think about this movie?"></textarea>
+  </div>
 
+  <div class="field">
+    <p class="mood-label">Your Mood</p>
+    <div class="mood-grid" id="moodGrid">
+      <button class="mood-btn" onclick="selectMood('😊', this)">😊</button>
+      <button class="mood-btn" onclick="selectMood('😍', this)">😍</button>
+      <button class="mood-btn" onclick="selectMood('😢', this)">😢</button>
+      <button class="mood-btn" onclick="selectMood('🔥', this)">🔥</button>
+      <button class="mood-btn" onclick="selectMood('😂', this)">😂</button>
+      <button class="mood-btn" onclick="selectMood('😱', this)">😱</button>
+    </div>
+    <p class="mood-status" id="moodStatus">Pick a mood above</p>
+  </div>
 
-<label>Movie Name</label>
+  <div class="divider"></div>
 
-<select id="movie">
+  <button class="submit-btn" onclick="submitReview()">Submit Review →</button>
 
-<option>Interstellar</option>
-<option>RRR</option>
-<option>Jawan</option>
-<option>Avatar: The Way Of Water</option>
-<option>Jana Nayagan</option>
-
-</select>
-
-
-
-<label>Your Review</label>
-
-<textarea placeholder="Write your review here..."></textarea>
-
-<label>Your Mood</label>
-
-<div class="mood-box">
-
-<button type="button" onclick="selectMood('😊')">😊</button>
-<button type="button" onclick="selectMood('😍')">😍</button>
-<button type="button" onclick="selectMood('😢')">😢</button>
-<button type="button" onclick="selectMood('🔥')">🔥</button>
-<button type="button" onclick="selectMood('😂')">😂</button>
-<button type="button" onclick="selectMood('😱')">😱</button>
-<button type="button" onclick="selectMood('🤩')">🤩</button>
-
-</div>
-
-<input type="hidden" id="emoji">
-<p id="selectedMood">No mood selected</p>
-
-
-<button onclick="submitReview()">
-Submit Review
-</button>
-
-
-
-<div id="result"></div>
-
+  <div class="result-box" id="resultBox">
+    <div class="result-movie" id="resultMovie"></div>
+    <div class="result-row">
+      <span id="resultMood" class="result-mood-emoji"></span>
+      <span id="resultMoodText"></span>
+    </div>
+    <div class="result-row">
+      💬 <span id="resultReview"></span>
+    </div>
+  </div>
 
 </div>
 
-
-
-<script>
-
-function submitReview(){
-    function selectMood(mood){
-
-    document.getElementById("emoji").value = mood;
-
-    document.getElementById("selectedMood").innerHTML =
-    "Selected Mood: " + mood;
-
-}
-
-let movie =
-document.getElementById("movie").value;
-
-
-let review =
-document.querySelector("textarea").value;
-
-
-let emoji =
-document.getElementById("emoji").value;
-
-
-
-document.getElementById("result").innerHTML =
-
-"<h3>Your Review</h3>"+
-"🎬 "+movie+
-"<br><br>"+
-emoji+
-"<br>"+
-review;
-
-}
-
-</script>
-
-
+<script src="review.js"></script>
 </body>
 </html>

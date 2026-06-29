@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SceneTag – Scene Highlighter</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scene.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="badge">🎬 SceneTag</div>
+  <h1>Which Scene Hit <em>Different?</em></h1>
+  <p>Tag your favourite moments. Build your scene leaderboard.</p>
+</header>
+
+<div class="main-card">
+
+  <!-- STEP 1: MOVIE -->
+  <div class="step">
+    <div class="step-label">01 — Pick the Movie</div>
+    <div class="select-wrap">
+      <select id="movieSelect" onchange="onMovieChange()">
+        <option value="">— Select a Movie —</option>
+        <option>Interstellar</option>
+        <option>RRR</option>
+        <option>Jawan</option>
+        <option>Vikram</option>
+        <option>KGF Chapter 2</option>
+        <option>Pushpa</option>
+        <option>Leo</option>
+        <option>Ponniyin Selvan</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STEP 2: SCENE CARDS -->
+  <div class="step">
+    <div class="step-label">02 — Tag Your Favourite Scenes</div>
+    <p class="step-hint">Tap a scene to highlight it. Tap again to remove.</p>
+
+    <div class="scene-grid" id="sceneGrid">
+
+      <div class="scene-card" data-scene="Interval Block" data-icon="⚡">
+        <div class="scene-icon">⚡</div>
+        <div class="scene-name">Interval Block</div>
+        <div class="scene-desc">That jaw-drop moment before interval</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Climax" data-icon="🔥">
+        <div class="scene-icon">🔥</div>
+        <div class="scene-name">Climax</div>
+        <div class="scene-desc">The big final showdown</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="First Fight" data-icon="💥">
+        <div class="scene-icon">💥</div>
+        <div class="scene-name">First Fight</div>
+        <div class="scene-desc">Hero's mass entry action scene</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Love Scene" data-icon="💕">
+        <div class="scene-icon">💕</div>
+        <div class="scene-name">Love Scene</div>
+        <div class="scene-desc">The romantic/emotional moment</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Comedy Scene" data-icon="😂">
+        <div class="scene-icon">😂</div>
+        <div class="scene-name">Comedy Scene</div>
+        <div class="scene-desc">The scene that made you laugh hardest</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Plot Twist" data-icon="🤯">
+        <div class="scene-icon">🤯</div>
+        <div class="scene-name">Plot Twist</div>
+        <div class="scene-desc">Nobody saw that coming!</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="BGM Moment" data-icon="🎵">
+        <div class="scene-icon">🎵</div>
+        <div class="scene-name">BGM Moment</div>
+        <div class="scene-desc">Background score gave goosebumps</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Emotional Scene" data-icon="😢">
+        <div class="scene-icon">😢</div>
+        <div class="scene-name">Emotional Scene</div>
+        <div class="scene-desc">That scene that hit your heart</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Villain Entry" data-icon="😈">
+        <div class="scene-icon">😈</div>
+        <div class="scene-name">Villain Entry</div>
+        <div class="scene-desc">The villain who stole the show</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Song Scene" data-icon="🎤">
+        <div class="scene-icon">🎤</div>
+        <div class="scene-name">Song Scene</div>
+        <div class="scene-desc">That one song you replay forever</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Dialogue Scene" data-icon="🗣️">
+        <div class="scene-icon">🗣️</div>
+        <div class="scene-name">Dialogue Scene</div>
+        <div class="scene-desc">One-liner that became iconic</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+      <div class="scene-card" data-scene="Flashback" data-icon="🔮">
+        <div class="scene-icon">🔮</div>
+        <div class="scene-name">Flashback</div>
+        <div class="scene-desc">The past that changed everything</div>
+        <div class="scene-check">✓</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STEP 3: CUSTOM SCENE -->
+  <div class="step">
+    <div class="step-label">03 — Add Your Own Scene</div>
+    <div class="custom-row">
+      <input type="text" id="customScene" class="custom-input" placeholder="e.g. Train fight scene...">
+      <button class="add-btn" onclick="addCustomScene()">+ Add</button>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STEP 4: BEST SCENE PICK -->
+  <div class="step">
+    <div class="step-label">04 — Your #1 Best Scene</div>
+    <div class="select-wrap">
+      <select id="bestScene">
+        <option value="">— Pick your absolute favourite —</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STEP 5: ONE LINE -->
+  <div class="step">
+    <div class="step-label">05 — One Line About the Movie</div>
+    <textarea class="review-input" id="reviewInput" placeholder="Paatha udane enna thonuthu?"></textarea>
+  </div>
+
+  <button class="submit-btn" onclick="generateLeaderboard()">
+    🏆 Generate Scene Leaderboard
+  </button>
+
+</div>
+
+<!-- LEADERBOARD -->
+<div class="leaderboard" id="leaderboard">
+
+  <div class="lb-header">
+    <div class="lb-title-row">
+      <div>
+        <div class="lb-eyebrow">🎬 Scene Leaderboard</div>
+        <h2 class="lb-movie" id="lbMovie">Movie</h2>
+      </div>
+      <div class="lb-count-badge" id="lbCount">0 scenes</div>
+    </div>
+  </div>
+
+  <div class="lb-body">
+
+    <div class="sec-label">Your Top Scenes</div>
+    <div id="lbScenes"></div>
+
+    <div class="best-scene-box" id="bestSceneBox">
+      <div class="bs-label">👑 Your #1 Best Scene</div>
+      <div class="bs-name" id="bsName"></div>
+    </div>
+
+    <div class="review-strip" id="reviewStrip"></div>
+
+  </div>
+
+</div>
+
+<script src="scene.js"></script>
+</body>
+</html>

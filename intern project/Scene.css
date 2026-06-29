@@ -1,0 +1,430 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#07070f;
+  --card:#111118;
+  --card2:#17171f;
+  --border:#202030;
+  --accent:#f5c518;
+  --accent2:#e8490a;
+  --teal:#2dd4bf;
+  --purple:#a78bfa;
+  --text:#f2f0ff;
+  --muted:#52506a;
+}
+
+body{
+  background:var(--bg);
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:36px 16px 72px;
+  background-image:
+    radial-gradient(ellipse at 15% 10%, rgba(245,197,24,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 90%, rgba(45,212,191,0.06) 0%, transparent 55%);
+}
+
+/* ── HEADER ── */
+.site-header{
+  text-align:center;
+  margin-bottom:32px;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(245,197,24,0.1);
+  border:1px solid rgba(245,197,24,0.22);
+  border-radius:999px;
+  padding:5px 16px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:14px;
+}
+.site-header h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(26px,6vw,42px);
+  font-weight:900;
+  color:var(--text);
+  line-height:1.08;
+}
+.site-header h1 em{
+  font-style:normal;
+  color:var(--accent);
+}
+.site-header p{
+  margin-top:10px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* ── MAIN CARD ── */
+.main-card{
+  width:100%;
+  max-width:520px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:26px;
+  padding:32px 28px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.55);
+}
+
+/* ── STEP ── */
+.step{ margin-bottom:4px; }
+
+.step-label{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:12px;
+}
+.step-hint{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:14px;
+}
+
+/* ── SELECT ── */
+.select-wrap{ position:relative; }
+.select-wrap select{
+  width:100%;
+  background:var(--card2);
+  border:1px solid var(--border);
+  border-radius:13px;
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  font-weight:500;
+  padding:13px 40px 13px 16px;
+  outline:none;
+  appearance:none;
+  cursor:pointer;
+  transition:border-color 0.2s;
+}
+.select-wrap select:focus{ border-color:var(--accent); }
+.select-wrap::after{
+  content:'▾';
+  position:absolute;
+  right:16px;top:50%;
+  transform:translateY(-50%);
+  color:var(--muted);
+  pointer-events:none;
+}
+
+/* ── DIVIDER ── */
+.divider{
+  height:1px;
+  background:var(--border);
+  margin:24px 0;
+}
+
+/* ── SCENE GRID ── */
+.scene-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.scene-card{
+  background:var(--card2);
+  border:2px solid var(--border);
+  border-radius:16px;
+  padding:14px 12px;
+  cursor:pointer;
+  transition:all 0.18s ease;
+  position:relative;
+  overflow:hidden;
+}
+.scene-card:hover{
+  border-color:#30304a;
+  transform:translateY(-2px);
+}
+.scene-card.tagged{
+  border-color:var(--accent);
+  background:rgba(245,197,24,0.07);
+}
+.scene-card.tagged .scene-icon{
+  filter:none;
+}
+
+.scene-icon{
+  font-size:24px;
+  margin-bottom:7px;
+  display:block;
+  line-height:1;
+  filter:grayscale(0.3);
+  transition:filter 0.2s;
+}
+.scene-name{
+  font-size:12px;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:3px;
+}
+.scene-desc{
+  font-size:10px;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+/* checkmark */
+.scene-check{
+  position:absolute;
+  top:10px;right:10px;
+  width:20px;height:20px;
+  background:var(--accent);
+  border-radius:50%;
+  font-size:11px;
+  font-weight:700;
+  color:#07070f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transform:scale(0.5);
+  transition:all 0.18s ease;
+}
+.scene-card.tagged .scene-check{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* ── CUSTOM SCENE ── */
+.custom-row{
+  display:flex;
+  gap:10px;
+}
+.custom-input{
+  flex:1;
+  background:var(--card2);
+  border:1px solid var(--border);
+  border-radius:13px;
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  padding:12px 16px;
+  outline:none;
+  transition:border-color 0.2s;
+}
+.custom-input::placeholder{ color:var(--muted); }
+.custom-input:focus{ border-color:var(--teal); }
+
+.add-btn{
+  background:rgba(45,212,191,0.15);
+  border:1.5px solid var(--teal);
+  border-radius:13px;
+  color:var(--teal);
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  padding:12px 18px;
+  cursor:pointer;
+  transition:all 0.18s;
+  white-space:nowrap;
+}
+.add-btn:hover{
+  background:rgba(45,212,191,0.25);
+}
+
+/* ── REVIEW INPUT ── */
+.review-input{
+  width:100%;
+  background:var(--card2);
+  border:1px solid var(--border);
+  border-radius:13px;
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  padding:13px 16px;
+  outline:none;
+  transition:border-color 0.2s;
+  resize:none;
+  height:80px;
+}
+.review-input::placeholder{ color:var(--muted); }
+.review-input:focus{ border-color:var(--purple); }
+
+/* ── SUBMIT ── */
+.submit-btn{
+  width:100%;
+  margin-top:28px;
+  padding:16px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border:none;
+  border-radius:14px;
+  color:#07070f;
+  font-family:'Syne',sans-serif;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:0.05em;
+  cursor:pointer;
+  transition:opacity 0.2s,transform 0.15s;
+}
+.submit-btn:hover{ opacity:0.9; transform:scale(1.01); }
+.submit-btn:active{ transform:scale(0.98); }
+
+/* ── LEADERBOARD ── */
+.leaderboard{
+  display:none;
+  width:100%;
+  max-width:520px;
+  margin-top:24px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:26px;
+  overflow:hidden;
+  animation:riseUp 0.45s cubic-bezier(0.22,1,0.36,1);
+}
+.leaderboard.show{ display:block; }
+
+@keyframes riseUp{
+  from{ opacity:0; transform:translateY(28px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+.lb-header{
+  background:linear-gradient(135deg,#1a1008,#0e0e18);
+  padding:24px 28px 20px;
+  border-bottom:1px solid var(--border);
+}
+.lb-title-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+.lb-eyebrow{
+  font-size:10px;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:700;
+  margin-bottom:6px;
+}
+.lb-movie{
+  font-family:'Syne',sans-serif;
+  font-size:22px;
+  font-weight:800;
+  color:var(--text);
+}
+.lb-count-badge{
+  background:rgba(245,197,24,0.12);
+  border:1px solid rgba(245,197,24,0.25);
+  border-radius:999px;
+  padding:5px 14px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+  white-space:nowrap;
+}
+
+.lb-body{ padding:24px 28px; }
+
+.sec-label{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.sec-label::after{
+  content:'';flex:1;
+  height:1px;
+  background:var(--border);
+}
+
+/* scene row in leaderboard */
+.lb-scene-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:12px 14px;
+  background:var(--card2);
+  border:1px solid var(--border);
+  border-radius:14px;
+  margin-bottom:8px;
+  animation:fadeSlide 0.3s ease both;
+}
+@keyframes fadeSlide{
+  from{ opacity:0; transform:translateX(-10px); }
+  to{ opacity:1; transform:translateX(0); }
+}
+
+.lb-rank{
+  font-family:'Syne',sans-serif;
+  font-size:18px;
+  font-weight:900;
+  color:var(--muted);
+  width:28px;
+  text-align:center;
+  flex-shrink:0;
+}
+.lb-rank.gold{ color:var(--accent); }
+.lb-rank.silver{ color:#94a3b8; }
+.lb-rank.bronze{ color:#b87333; }
+
+.lb-scene-icon{ font-size:22px; flex-shrink:0; }
+.lb-scene-name{
+  font-size:14px;
+  font-weight:600;
+  color:var(--text);
+  flex:1;
+}
+.lb-tag{
+  font-size:10px;
+  font-weight:700;
+  background:rgba(167,139,250,0.12);
+  border:1px solid rgba(167,139,250,0.3);
+  border-radius:999px;
+  padding:3px 10px;
+  color:var(--purple);
+}
+
+/* ── BEST SCENE BOX ── */
+.best-scene-box{
+  margin-top:20px;
+  background:linear-gradient(135deg,rgba(245,197,24,0.08),rgba(232,73,10,0.06));
+  border:1px solid rgba(245,197,24,0.25);
+  border-radius:16px;
+  padding:18px 20px;
+  text-align:center;
+}
+.bs-label{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:8px;
+}
+.bs-name{
+  font-family:'Syne',sans-serif;
+  font-size:20px;
+  font-weight:800;
+  color:var(--text);
+}
+
+/* ── REVIEW STRIP ── */
+.review-strip{
+  margin-top:16px;
+  padding:14px 16px;
+  background:var(--card2);
+  border-left:3px solid var(--teal);
+  border-radius:12px;
+  font-size:13px;
+  color:var(--muted);
+  font-style:italic;
+  line-height:1.55;
+  display:none;
+}
+.review-strip.show{ display:block; }

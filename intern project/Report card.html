@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CineRate – Movie Emotion Rater</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Report-card.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="badge">🎬 CineRate</div>
+  <h1>Rate Every <em>Emotion</em><br>of the Movie</h1>
+  <p>Not just stars — rate what you actually felt.</p>
+</header>
+
+<!-- TICKET -->
+<div class="ticket">
+  <div class="ticket-top">
+    <div class="ticket-meta">
+      <div>
+        <div class="label">Now Rating</div>
+        <div class="value" id="ticketMovieName">Pick a movie →</div>
+      </div>
+      <div class="ticket-num">#CIN-2024</div>
+    </div>
+    <div class="movie-select-wrap">
+      <select id="movieSelect" onchange="updateTicketName()">
+        <option value="">— Select a Movie —</option>
+        <option>Interstellar</option>
+        <option>RRR</option>
+        <option>Jawan</option>
+        <option>Vikram</option>
+        <option>KGF Chapter 2</option>
+        <option>Pushpa</option>
+        <option>Leo</option>
+        <option>Ponniyin Selvan</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="ticket-body">
+
+    <!-- EMOTION RATINGS -->
+    <div class="sec-title">Emotion Ratings</div>
+
+    <div class="emotion-grid">
+
+      <div class="emotion-card" data-type="action">
+        <div class="emotion-top">
+          <span class="emotion-icon">💥</span>
+          <div>
+            <div class="emotion-name">Action</div>
+            <div class="emotion-desc">Fights, stunts & chase</div>
+          </div>
+        </div>
+        <div class="stars" data-key="action">
+          <span class="star" data-val="1">★</span>
+          <span class="star" data-val="2">★</span>
+          <span class="star" data-val="3">★</span>
+          <span class="star" data-val="4">★</span>
+          <span class="star" data-val="5">★</span>
+        </div>
+      </div>
+
+      <div class="emotion-card" data-type="comedy">
+        <div class="emotion-top">
+          <span class="emotion-icon">😂</span>
+          <div>
+            <div class="emotion-name">Comedy</div>
+            <div class="emotion-desc">Laughs & fun moments</div>
+          </div>
+        </div>
+        <div class="stars" data-key="comedy">
+          <span class="star" data-val="1">★</span>
+          <span class="star" data-val="2">★</span>
+          <span class="star" data-val="3">★</span>
+          <span class="star" data-val="4">★</span>
+          <span class="star" data-val="5">★</span>
+        </div>
+      </div>
+
+      <div class="emotion-card" data-type="romance">
+        <div class="emotion-top">
+          <span class="emotion-icon">💕</span>
+          <div>
+            <div class="emotion-name">Romance</div>
+            <div class="emotion-desc">Love & chemistry</div>
+          </div>
+        </div>
+        <div class="stars" data-key="romance">
+          <span class="star" data-val="1">★</span>
+          <span class="star" data-val="2">★</span>
+          <span class="star" data-val="3">★</span>
+          <span class="star" data-val="4">★</span>
+          <span class="star" data-val="5">★</span>
+        </div>
+      </div>
+
+      <div class="emotion-card" data-type="sad">
+        <div class="emotion-top">
+          <span class="emotion-icon">😢</span>
+          <div>
+            <div class="emotion-name">Emotion</div>
+            <div class="emotion-desc">Tears & heart moments</div>
+          </div>
+        </div>
+        <div class="stars" data-key="sad">
+          <span class="star" data-val="1">★</span>
+          <span class="star" data-val="2">★</span>
+          <span class="star" data-val="3">★</span>
+          <span class="star" data-val="4">★</span>
+          <span class="star" data-val="5">★</span>
+        </div>
+      </div>
+
+      <div class="emotion-card" data-type="thriller">
+        <div class="emotion-top">
+          <span class="emotion-icon">😱</span>
+          <div>
+            <div class="emotion-name">Thriller</div>
+            <div class="emotion-desc">Suspense & twists</div>
+          </div>
+        </div>
+        <div class="stars" data-key="thriller">
+          <span class="star" data-val="1">★</span>
+          <span class="star" data-val="2">★</span>
+          <span class="star" data-val="3">★</span>
+          <span class="star" data-val="4">★</span>
+          <span class="star" data-val="5">★</span>
+        </div>
+      </div>
+
+      <div class="emotion-card" data-type="bgm">
+        <div class="emotion-top">
+          <span class="emotion-icon">🎵</span>
+          <div>
+            <div class="emotion-name">BGM / Songs</div>
+            <div class="emotion-desc">Music & background score</div>
+          </div>
+        </div>
+        <div class="stars" data-key="bgm">
+          <span class="star" data-val="1">★</span>
+          <span class="star" data-val="2">★</span>
+          <span class="star" data-val="3">★</span>
+          <span class="star" data-val="4">★</span>
+          <span class="star" data-val="5">★</span>
+        </div>
+      </div>
+
+      <div class="emotion-card" data-type="visual">
+        <div class="emotion-top">
+          <span class="emotion-icon">🎥</span>
+          <div>
+            <div class="emotion-name">Visuals</div>
+            <div class="emotion-desc">Cinematography & VFX</div>
+          </div>
+        </div>
+        <div class="stars" data-key="visual">
+          <span class="star" data-val="1">★</span>
+          <span class="star" data-val="2">★</span>
+          <span class="star" data-val="3">★</span>
+          <span class="star" data-val="4">★</span>
+          <span class="star" data-val="5">★</span>
+        </div>
+      </div>
+
+      <div class="emotion-card" data-type="story">
+        <div class="emotion-top">
+          <span class="emotion-icon">📖</span>
+          <div>
+            <div class="emotion-name">Story</div>
+            <div class="emotion-desc">Script & screenplay</div>
+          </div>
+        </div>
+        <div class="stars" data-key="story">
+          <span class="star" data-val="1">★</span>
+          <span class="star" data-val="2">★</span>
+          <span class="star" data-val="3">★</span>
+          <span class="star" data-val="4">★</span>
+          <span class="star" data-val="5">★</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- OVERALL VIBE -->
+    <div class="sec-title">Overall Vibe</div>
+    <div class="vibe-row" id="vibeRow">
+      <button class="vibe-btn" onclick="selectVibe(this)">🔥 Mass</button>
+      <button class="vibe-btn" onclick="selectVibe(this)">🥹 Emotional</button>
+      <button class="vibe-btn" onclick="selectVibe(this)">🤯 Mind-blown</button>
+      <button class="vibe-btn" onclick="selectVibe(this)">😂 Fun ride</button>
+      <button class="vibe-btn" onclick="selectVibe(this)">😴 Boring</button>
+      <button class="vibe-btn" onclick="selectVibe(this)">💯 Masterpiece</button>
+      <button class="vibe-btn" onclick="selectVibe(this)">🎭 Timepass</button>
+      <button class="vibe-btn" onclick="selectVibe(this)">🌟 Surprise hit</button>
+    </div>
+
+    <!-- ONE LINE REVIEW -->
+    <div class="sec-title">One Line Review</div>
+    <textarea class="review-input" id="reviewInput" placeholder="Paatha udane enna thonuthu? (What did you feel?)"></textarea>
+
+    <button class="submit-btn" onclick="submitRating()">🎬 Generate Director's Report Card</button>
+
+  </div>
+</div>
+
+<!-- DIRECTOR REPORT CARD -->
+<div class="report" id="reportCard">
+  <div class="report-header">
+    <div class="left">
+      <div class="eyebrow">🎬 Director's Report Card</div>
+      <h2>🎥 <span id="reportMovieName">Movie</span></h2>
+    </div>
+    <div class="overall-score">
+      <div class="num" id="overallScore">0</div>
+      <div class="denom">/ 5.0</div>
+    </div>
+  </div>
+
+  <div class="report-body">
+
+    <div class="sec-title">Emotion Breakdown</div>
+    <div id="barsContainer"></div>
+
+    <div class="verdict-box">
+      <div class="verdict-label">🏆 Verdict</div>
+      <div class="verdict-text" id="verdictText"></div>
+      <div id="vibeTags"></div>
+      <div class="review-quote" id="reviewQuote"></div>
+    </div>
+
+    <div class="director-stamp">
+      <div class="stamp-left">
+        <strong id="stampDate"></strong>
+        Rated by CineRate User<br>
+        <span class="strong-emotion" id="strongEmotion"></span>
+      </div>
+      <div class="stamp-seal">🎬</div>
+    </div>
+
+  </div>
+</div>
+
+<script src="rating.js"></script>
+</body>
+</html>
