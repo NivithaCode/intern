@@ -1,0 +1,215 @@
+*{
+    box-sizing:border-box;
+    font-family:Inter, sans-serif;
+}
+
+
+body{
+
+    margin:0;
+    background:#0d0f1a;
+    color:#e2e8f0;
+
+}
+
+
+.container{
+
+    width:80%;
+    margin:40px auto;
+
+}
+
+
+.card{
+
+    background:#151a2e;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #252b45;
+
+}
+
+
+
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.header h2{
+
+    color:#8b5cf6;
+
+}
+
+
+.header a{
+
+    text-decoration:none;
+    color:#94a3b8;
+
+}
+
+
+
+.rating-section{
+
+    display:flex;
+    align-items:center;
+    gap:60px;
+    margin-top:30px;
+
+}
+
+
+
+.donut{
+
+    width:230px;
+    height:230px;
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+    #8b5cf6 0% 45%,
+    #10b981 45% 75%,
+    #3b82f6 75% 90%,
+    #f59e0b 90% 96%,
+    #ef4444 96% 100%
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+.donut-hole{
+
+    width:140px;
+    height:140px;
+    background:#151a2e;
+    border-radius:50%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.donut-hole h2{
+
+    margin:0;
+    font-size:30px;
+
+}
+
+
+
+.donut-hole p{
+
+    font-size:12px;
+    color:#94a3b8;
+
+}
+
+
+
+.rating-list{
+
+    list-style:none;
+    padding:0;
+
+}
+
+
+.rating-list li{
+
+    display:flex;
+    gap:15px;
+    width:250px;
+    margin:18px;
+    font-size:18px;
+
+}
+
+
+.rating-list b{
+
+    margin-left:auto;
+
+}
+
+
+
+.dot{
+
+    width:15px;
+    height:15px;
+    border-radius:50%;
+
+}
+
+
+
+.purple{
+background:#8b5cf6;
+}
+
+.green{
+background:#10b981;
+}
+
+.blue{
+background:#3b82f6;
+}
+
+.orange{
+background:#f59e0b;
+}
+
+.red{
+background:#ef4444;
+}
+
+
+
+.summary,
+.movies{
+
+    margin-top:35px;
+    background:#111527;
+    padding:20px;
+    border-radius:15px;
+
+}
+
+
+
+.movie-card{
+
+    background:#1a1f35;
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+
+    display:flex;
+    justify-content:space-between;
+
+}
+
+
+.movie-card span{
+
+    color:#fbbf24;
+
+}

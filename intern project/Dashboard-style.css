@@ -378,6 +378,31 @@ body{
     gap:15px;
 }
 
+
+.panel-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.view-all{
+    margin-left:auto;
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+    color:white;
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.view-all:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(139,92,246,0.4);
+}
+
 .review-list li{
     display:flex;
     align-items:center;

@@ -33,16 +33,13 @@ function searchMovies() {
     if (movies[i].toLowerCase().indexOf(input.toLowerCase()) != -1) {
       var div = document.createElement('div');
       div.innerText = '🎬 ' + movies[i];
-      div.style.padding = '10px 14px';
-      div.style.color = '#e2e8f0';
-      div.style.cursor = 'pointer';
-      div.style.borderBottom = '1px solid #1a1f35';
-      div.style.fontSize = '13px';
+      div.className = 'result-item';  // ← இதை add பண்ணுங்க!
       div.setAttribute('onclick', "window.location.href='" + movies[i] + ".html'");
       box.appendChild(div);
     }
   }
 }
+
 </script>
 </body>
 </html>
